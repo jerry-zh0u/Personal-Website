@@ -4,7 +4,18 @@
     box-sizing: border-box;
 }
 
+html{
+    height:100%;
+    scroll-behavior: smooth;
+}
+
 body {
+    /* min-height: 100vh; */
+    display:flex;
+    flex-direction: column;
+
+    height:100%;
+
     font-family: Candara, Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #222;
@@ -23,6 +34,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    z-index: 1000;
+}
+
+.site-footer{
+    position:relative;
+    z-index: 1;
+    
+    height:60px;
+    background-color: rgb(0, 73, 0);
+    color:white;
+
+    min-height: 60px;
 }
 
 .name {
@@ -45,6 +69,44 @@ body {
     max-width: 850px;
     margin: 120px auto 0 auto;
     padding: 0 24px;
+
+    flex: 1;
+    z-index:50;
+}
+
+.experience-content{
+    width: 100%;
+    max-width: 1100px;
+    margin:120px auto 120px auto;
+    position:relative;
+
+    font-size: 24px;
+
+    padding-left: 15px;
+
+    border-left: 1px solid #e5e5e5;
+
+    flex:1;
+    justify-content: center;
+
+    z-index:50;
+}
+
+.menu{
+    position:fixed;
+    top: 120px;
+    left: 50%;
+
+    transform: translateX(-300%);
+    color:#777777;
+
+    white-space: nowrap;
+}  
+
+.menu a{
+    color:inherit;
+
+    text-decoration: none;
 }
 
 .about-layout {
@@ -104,4 +166,40 @@ body {
 .content p {
     font-size: 1.2rem;
     color: #444;
+}
+
+.experience-content p{
+    font-size: 1.2rem;
+}
+
+.experience-content h1{
+    font-size: 2.5rem;
+    margin-bottom:0px;
+}
+.experience-content h2{
+    font-size: 1.5rem;
+    margin-bottom:5px;
+
+    scroll-margin-top: 150px;
+}
+
+.cow{
+    width: 128px;
+    height:128px;
+
+    position:relative;
+    
+    border:1px solid black;
+    background: url(images/cow-walking.png);
+
+    animation: walk 1s steps(2) infinite;
+}
+
+@keyframes walk{
+    0% {
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 -256px;
+    }
 }

@@ -1,3 +1,21 @@
+let pos = 0;
+let direction = 1;
+const speed = 0.2;
+
+function cowAnimate(){
+  const cow = document.getElementById("cow");
+
+  pos += speed * direction
+
+  if(pos > window.innerWidth - 128 || pos < 0){
+    direction *= -1
+  }
+  
+  cow.style.left = pos + 'px';
+
+  requestAnimationFrame(cowAnimate);
+}
+
 function fetchLastUpdated() {
   fetch('https://api.github.com/repos/jerry-zh0u/Personal-Website/commits?per_page=1')
     .then(response => response.json())
@@ -26,3 +44,4 @@ function fetchLastUpdated() {
 }
 
 document.addEventListener("DOMContentLoaded", fetchLastUpdated);
+document.addEventListener("DOMContentLoaded", cowAnimate)

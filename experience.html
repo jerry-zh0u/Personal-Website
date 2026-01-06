@@ -16,53 +16,114 @@
             </nav>
         </header>
 
-        <nav class = "menu">
-            <h3>Menu</h3>
-            <h3>Research</h3>
+        <nav class = "experience-menu">
+            <h3><a href = "experience.html"> <u> Menu </u></a></h3>
+            <h3><a href = "#research-section"> <u> Research </u></a></h3>
                 &emsp; <a href = "#bml-section"> <u>Biomimetic Millisystems Lab <span>(BML)</span></u></a>
-            <h3>Professional Experience</h3>
-                <p> &emsp; Formula Electric @ Berkeley <span>(FEB)</span></p>
-                <p> &emsp; Engineering Solutions @ Berkeley <span>(ESB)</span></p>
+            <h3><a href = "#professional-section"> <u> Professoinal Experience </u></a></h3>
+                &emsp; <a href = "#feb-section"> <u>Formula Electric @ Berkeley <span>(FEB)</span></u></a> <br>
+                &emsp; <a href = "#esb-section"> <u>Engineering Solutions @ Berkeley  <span>(ESB)</span></u></a>
+            <h3><a href = "#other-section"> <u> Other </u></a></h3>
+                &emsp; <a href = "#hs-section"> <u>High School Quests <span>(BML)</span></u></a>
         </nav>
         <main class = "experience-content" id = "main-experience">
             <div class = "research-expereince">
-                <h1 id = "research-section">Research</h1>
+                <h1 style = "scroll-margin-top: 100px;" id = "research-section">Research</h1>
                 <div class = "BML">
-                    <h2 style="margin-left: 50px;" id = "bml-section"> Biomimetic Millisystems Lab <span>(BML)</span></h2>
-                    <p style = "margin-left: 50px;">
-                        I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
-                        Currently, I am implementing a disturbance observer to ensure stability and safety in the a bore.
-                    </p>
+                    <h2 style = "margin-left: 50px;" id = "bml-section"> 
+                        Biomimetic Millisystems Lab <span>(BML)</span>:
+                    </h2>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher <span>(2025-present)</span></u></p>
+                    <div class = "experience-individual-subcontent">
+                        <p style = "margin-left: 50px;">
+                            I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
+                            Having already developed a PD controlled arm, I am implementing a disturbance observer to ensure further stability and safety inside the MRI bore. 
+                            To do so I am using bond graphs and transfer functions to derive a steady-state space model for the velocity controlled ultrasonic motors controlling the arm.
+                        </p>
+                        <img src = "images/BML Logo.jpg">
+                    </div>
                 </div>
             </div>
             <div class = "professional-experience">
-                <h1>Professional Experiences</h1>
+                <h1 style = "scroll-margin-top: 100px;" id = "professional-section">Professional Experiences</h1>
                 <div class = "FEB">
-                    <h2 style = "margin-left: 50px;">Formula Electric at Berkeley <span>(FEB)</span></h2>
-                    <p style = "margin-left: 50px;">
-                        [ADD INFO]
-                    </p>
+                    <h2 style = "margin-left: 50px;" id = "feb-section">
+                        Formula Electric at Berkeley <span>(FEB)</span>:
+                    </h2>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Accumulator Electrical Engineer <span>(2025-present)</span></u></p>
+                    <div class = "experience-individual-subcontent">
+                        <p style = "margin-left: 50px;">
+                            I am currently designing and validating the Segment Board to monitor our 1403p battery pack. There are 10 segment boards, each monitoring 14 cells.
+                            This 4-layer PCB serves as the "brains" for all our battery control.
+                            It houses the logic through the ADBMS chip reading in voltage through a board to board connection and temperature values through ribbon cables and muxxing. 
+                            Additionally it communicates with other boards through isoSPI and CAN protocols.
+                        </p>
+                        
+                        <div class = "slideshow">
+                            <button class = "nav-button left">
+                                &#10094;
+                            </button>
+                            <img class = "img-slideshow">
+                            <button class = "nav-button right">
+                                &#10095;
+                            </button>
+                            <!-- <div class = "description-slideshow"></div> -->
+                            <!-- <button class = "expand-button">
+                                Expand
+                            </button> -->
+                        </div>
+
+                        <div id = "feb-full-screen" class = "full-screen hidden">
+                            <div class = "full-screen-content">
+                                <img id = "full-screen-img" src = "">
+                                <div class = "full-screen description" id = "full-screen-description"></div>
+                                <button class = "close-full-screen">&times;</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class = "ESB">
-                    <h2 style = "margin-left: 50px;">Engineering Solutions at Berkeley <span>(ESB)</span></h2>
-                    <p style = "margin-left: 50px;">
-                        [ADD INFO]
-                    </p>
+                    <h2 style = "margin-left: 50px;" id = "esb-section">
+                        Engineering Solutions at Berkeley <span>(ESB)</span>:
+                    </h2>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant <span>(2025-present)</span></u></p>
+                    <div class = "experience-individual-subcontent">
+                        <p style = "margin-left: 50px;">
+                            I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
+                            Having already developed a PD controlled arm, I am implementing a disturbance observer to ensure further stability and safety inside the MRI bore. 
+                            To do so I am using bond graphs and transfer functions to derive a steady-state space model for the velocity controlled ultrasonic motors controlling the arm.
+                        </p>
+                        <img src = "images/BML Logo.jpg">
+                    </div>
                 </div>
             </div>
             <div class = "other-experience">
-                <h1>Other</h1>
+                <h1 style = "scroll-margin-top: 100px;" id = "other-section">Other</h1>
                 <div class = "high-school">
-                    <h2 style = "margin-left: 50px;">High School Quests</h2>
-                    <p style = "margin-left: 50px;">
-                        temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>temp<br>
-                    </p>
+                    <h2 id = "hs-section" style = "margin-left: 50px;">
+                        High School Quests:
+                    </h2>
+
+                    <div class = "experience-individual-subcontent">
+                        <p style = "margin-left: 50px;">
+                            I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
+                            Having already developed a PD controlled arm, I am implementing a disturbance observer to ensure further stability and safety inside the MRI bore. 
+                            To do so I am using bond graphs and transfer functions to derive a steady-state space model for the velocity controlled ultrasonic motors controlling the arm.
+                        </p>
+                        <img src = "images/BML Logo.jpg">
+                    </div>
                 </div>
             </div>
         </main>
         
-        <footer class = "site-footer">
-            <p>yessir</p>
-        </footer>
+        <div class = "footer-container">
+            <div class = "cow" id = "cow"></div>
+
+            <footer class = "site-footer">
+                <p>&copy; <span id = "year"></span> Jerry Zhou. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <script src = "home.js"></script>
     </body>
 </html>

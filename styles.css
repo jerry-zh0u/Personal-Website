@@ -38,9 +38,15 @@ body {
     z-index: 1000;
 }
 
-.site-footer{
+
+.footer-container{
     position:relative;
-    z-index: 1;
+}
+
+.site-footer{
+    display:flex;
+    position:relative;
+    padding: 16px 24px;
     
     height:60px;
     background-color: rgb(0, 73, 0);
@@ -92,7 +98,33 @@ body {
     z-index:50;
 }
 
-.menu{
+.projects-content{
+    width: 100%;
+    max-width: 1100px;
+    margin:120px auto 120px auto;
+    position:relative;
+
+    font-size: 24px;
+
+    padding-left: 15px;
+
+    border-left: 1px solid #e5e5e5;
+
+    flex:1;
+    justify-content: center;
+
+    z-index:50;
+}
+
+.courses{
+    width: 100%;
+    max-width: 900px;
+    margin: 120px auto 0 auto;
+
+    flex: 1;
+}
+
+.experience-menu{
     position:fixed;
     top: 120px;
     left: 50%;
@@ -103,7 +135,18 @@ body {
     white-space: nowrap;
 }  
 
-.menu a{
+.projects-menu{
+    position:fixed;
+    top: 120px;
+    left: 50%;
+
+    transform: translateX(-300%);
+    color:#777777;
+
+    white-space: nowrap;
+}  
+
+.experience-menu a, .projects-menu a{
     color:inherit;
 
     text-decoration: none;
@@ -180,19 +223,65 @@ body {
     font-size: 1.5rem;
     margin-bottom:5px;
 
-    scroll-margin-top: 150px;
+    scroll-margin-top: 100px;
+}
+
+.experience-individual-subcontent{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    gap: 15px;
+}
+
+.experience-individiual-title{
+    margin-left: 50px;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+.experience-individual-subcontent img{
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.course-grid{
+    justify-content: center;
+    display:grid;
+    
+    grid-template-columns: repeat(2, 550px);
+    grid-template-rows: repeat(1, 225px);
+    gap: 50px;
+
+    margin-top: 20px;
+}
+
+.course-grid-cell{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+
+    border-radius: 15px;
+    padding: 20px 30px;
 }
 
 .cow{
-    width: 128px;
-    height:128px;
+    width: 80px;
+    height:80px;
 
     position:relative;
     
-    border:1px solid black;
+    /* border:1px solid black; */
     background: url(images/cow-walking.png);
 
-    animation: walk 1s steps(2) infinite;
+    animation: walk 0.7s steps(2) infinite;
 }
 
 @keyframes walk{
@@ -200,6 +289,69 @@ body {
         background-position: 0 0;
     }
     100%{
-        background-position: 0 -256px;
+        background-position: 0 -160px;
     }
+}
+
+.slideshow{
+    position:relative;
+    width: 400px;
+}
+
+.img-slideshow{
+    width:100%;
+    border-radius: 10px;
+}
+
+.description-slideshow{
+    font-size: 18px;
+    text-align: center;
+}
+
+.nav-button{
+    position:absolute;
+    top:50%;
+    transform: translateY(-70%);
+    background: rgba(0, 0, 0, 0.35);
+    border:none;
+
+    color:white;
+
+    font-size: 32px;
+    padding: 12px 18px;
+    
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+.nav-button.hidden{
+    display: none;
+}
+
+.left{
+    left:10px;
+}
+
+.right{
+    right:10px;
+}
+
+.full-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1001;
+}
+
+.full-screen.hidden{
+    display:none;
 }

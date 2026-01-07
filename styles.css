@@ -211,29 +211,34 @@ body {
     color: #444;
 }
 
-.experience-content p{
+.experience-content p, .projects-content p{
     font-size: 1.2rem;
 }
 
-.experience-content h1{
+.experience-content h1, .projects-content h1{
     font-size: 2.5rem;
     margin-bottom:0px;
 }
-.experience-content h2{
+.experience-content h2, .projects-content h2{
     font-size: 1.5rem;
     margin-bottom:5px;
 
     scroll-margin-top: 100px;
 }
 
-.experience-individual-subcontent{
+.experience-individual-subcontent, .projects-individual-subcontent{
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
 
     margin-bottom: 20px;
 
     gap: 15px;
+
+    /* display: grid;
+    grid-template-columns: 70% 30%;
+
+    column-gap: 30px; */
 }
 
 .experience-individiual-title{
@@ -242,7 +247,7 @@ body {
     line-height: 20px;
 }
 
-.experience-individual-subcontent img{
+.experience-individual-subcontent img, .projects-individual-subcontent img{
     width: 400px;
     height: auto;
     margin-bottom: 20px;
@@ -295,17 +300,29 @@ body {
 
 .slideshow{
     position:relative;
-    width: 400px;
+    height: auto;
 }
 
 .img-slideshow{
     width:100%;
+    height:100%;
+    object-fit: contain;
     border-radius: 10px;
+
+    margin-bottom: 0px;
+    padding-bottom:0px;
+}
+
+.img-info{
+    position: relative;
 }
 
 .description-slideshow{
     font-size: 18px;
     text-align: center;
+
+    margin-top:-30px;
+    padding-top:0px;
 }
 
 .nav-button{

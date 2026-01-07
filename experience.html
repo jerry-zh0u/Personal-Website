@@ -24,16 +24,16 @@
                 &emsp; <a href = "#feb-section"> <u>Formula Electric @ Berkeley <span>(FEB)</span></u></a> <br>
                 &emsp; <a href = "#esb-section"> <u>Engineering Solutions @ Berkeley  <span>(ESB)</span></u></a>
             <h3><a href = "#other-section"> <u> Other </u></a></h3>
-                &emsp; <a href = "#hs-section"> <u>High School Quests <span>(BML)</span></u></a>
+                &emsp; <a href = "#hs-section"> <u>High School Quests</u></a>
         </nav>
         <main class = "experience-content" id = "main-experience">
             <div class = "research-expereince">
                 <h1 style = "scroll-margin-top: 100px;" id = "research-section">Research</h1>
                 <div class = "BML">
                     <h2 style = "margin-left: 50px;" id = "bml-section"> 
-                        Biomimetic Millisystems Lab <span>(BML)</span>:
+                        Biomimetic Millisystems Lab (BML):
                     </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher <span>(2025-present)</span></u></p>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (October 2025-present)</u></p>
                     <div class = "experience-individual-subcontent">
                         <p style = "margin-left: 50px;">
                             I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
@@ -50,24 +50,32 @@
                     <h2 style = "margin-left: 50px;" id = "feb-section">
                         Formula Electric at Berkeley <span>(FEB)</span>:
                     </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Accumulator Electrical Engineer <span>(2025-present)</span></u></p>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Accumulator Electrical Engineer (October 2025-present)</u></p>
                     <div class = "experience-individual-subcontent">
-                        <p style = "margin-left: 50px;">
-                            I am currently designing and validating the Segment Board to monitor our 1403p battery pack. There are 10 segment boards, each monitoring 14 cells.
-                            This 4-layer PCB serves as the "brains" for all our battery control.
-                            It houses the logic through the ADBMS chip reading in voltage through a board to board connection and temperature values through ribbon cables and muxxing. 
-                            Additionally it communicates with other boards through isoSPI and CAN protocols.
-                        </p>
+                        <div>
+                            <p style = "margin-left: 50px; margin-bottom: 5px;">
+                                I am currently designing and validating the Segment Board to monitor our 1403p battery pack. There are 10 segment boards, each monitoring 14 cells.
+                                This 4-layer PCB serves as the "brains" for all our battery control.
+                                It houses the logic through the ADBMS chip reading in voltage through a board to board connection and temperature values through ribbon cables and muxxing. 
+                                Additionally it communicates with other boards through isoSPI and CAN protocols.
+                            </p>
+                            <p style = "margin-left: 50px;">
+                                Validation will be powered by a resistor divider from 52V to simulate one battery pack (14 cells each nominal 3V3). 
+                                Balancing will be tested by deploying STM32 code onto another board which will transmite signals over isoSPI to the ADBMS chip.
+                            </p>
+                        </div>
                         
-                        <div class = "slideshow">
-                            <button class = "nav-button left">
-                                &#10094;
-                            </button>
-                            <img class = "img-slideshow">
-                            <button class = "nav-button right">
-                                &#10095;
-                            </button>
-                            <!-- <div class = "description-slideshow"></div> -->
+                        <div class = "slideshow feb-slideshow">
+                            <div class = "img-info">
+                                <button class = "nav-button left">
+                                    &#10094;
+                                </button>
+                                <img class = "img-slideshow">
+                                <button class = "nav-button right">
+                                    &#10095;
+                                </button>
+                            </div>
+                            <div class = "description-slideshow"></div>
                             <!-- <button class = "expand-button">
                                 Expand
                             </button> -->
@@ -86,14 +94,30 @@
                     <h2 style = "margin-left: 50px;" id = "esb-section">
                         Engineering Solutions at Berkeley <span>(ESB)</span>:
                     </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant <span>(2025-present)</span></u></p>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant (September - December 2025): Magnitude.io</u></p>
                     <div class = "experience-individual-subcontent">
                         <p style = "margin-left: 50px;">
-                            I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
-                            Having already developed a PD controlled arm, I am implementing a disturbance observer to ensure further stability and safety inside the MRI bore. 
-                            To do so I am using bond graphs and transfer functions to derive a steady-state space model for the velocity controlled ultrasonic motors controlling the arm.
+                            We were tasked to construct a random positioning machine to simulate zero-gravity on Earth for fungi by Magnitude.io. 
+                            I designed a two layer PCB and housing containing an ESP-32, terminal blocks for signal/power for our components (optical encoder, motor driver, etc.), and USB-C port. 
+                            This board took in 12V and stepped it down to 5V and 3V3. 
+                            It had I2C protocol to communicate with a Raspberry Pi, and 8-bit and SPI protocol to communicate with the Adafruit Capacitive Touch Display.
+                            Additionally, I helped to develop random paths with random Fourier Transforms and Psuedo-Random Binary Sequence using encoder data. 
                         </p>
-                        <img src = "images/BML Logo.jpg">
+                        <div class = "slideshow esb-slideshow">
+                            <div class = "img-info">
+                                <button class = "nav-button left">
+                                    &#10094;
+                                </button>
+                                <img class = "img-slideshow">
+                                <button class = "nav-button right">
+                                    &#10095;
+                                </button>
+                            </div>
+                            <div class = "description-slideshow"></div>
+                            <!-- <button class = "expand-button">
+                                Expand
+                            </button> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,12 +129,34 @@
                     </h2>
 
                     <div class = "experience-individual-subcontent">
-                        <p style = "margin-left: 50px;">
-                            I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
-                            Having already developed a PD controlled arm, I am implementing a disturbance observer to ensure further stability and safety inside the MRI bore. 
-                            To do so I am using bond graphs and transfer functions to derive a steady-state space model for the velocity controlled ultrasonic motors controlling the arm.
-                        </p>
-                        <img src = "images/BML Logo.jpg">
+                        <div style = "margin-left: 50px; font-size: 1.2rem;">
+                            During my junior and senior year, I was the lead programmer and <span style = "white-space: nowrap;">co-president</span> of our robotics team, team 5805.
+                            I created our team's first swerve drive, camera tracking system using PhotonVision, and autonomous routine with PathPlanner.
+                            Additionally, I helped wire the robot and machine parts for our telescopic elevator. 
+                            This eventually led to our program's first one in seven years (go eagles)! 
+                            <br><br>
+                            I also competed in academic competitions: 
+                            <ul style = "margin-left: 20px;">
+                                <li>USA Computing Olympiad Gold Qualifer</li>
+                                <li>American Invitational Mathematics Exam Qualifier</li>
+                                <li>American Computer Science League Bronze Medalist</li>
+                            </ul>
+                        </div>
+                        <div class = "slideshow hs-slideshow">
+                            <div class = "img-info">
+                                <button class = "nav-button left">
+                                    &#10094;
+                                </button>
+                                <img class = "img-slideshow">
+                                <button class = "nav-button right">
+                                    &#10095;
+                                </button>
+                            </div>
+                            <div class = "description-slideshow"></div>
+                            <!-- <button class = "expand-button">
+                                Expand
+                            </button> -->
+                        </div>
                     </div>
                 </div>
             </div>

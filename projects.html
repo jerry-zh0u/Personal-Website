@@ -5,7 +5,7 @@
     </head>
     <body>
         <header class="site-header">
-            <div class="name">Jerry Zhou🐄</div>
+            <div class="name"> <a href = "index.html" style = "text-decoration: none; color: black;">Jerry Zhou🐄</a></div>
 
             <nav class = "header-nav">
                 <a href = "index.html">Home</a>
@@ -17,11 +17,10 @@
         </header>
 
         <nav class = "projects-menu">
-            <h3><a href = "#hardware-projects-section"> <u> Hardware </u></a></h3>
+            <h3><a href = "#hardware-projects-section"> <u> Hardware Projects</u></a></h3>
                 &emsp; <a href = "#wdm-section"> <u>Wavelength Division Multiplexer <span>(WDM)</span></u></a><br>
                 &emsp; <a href = "#double-slit-section"> <u>Polarized Double Slit Experiment </u></a>
-            <h3><a href = "#software-projects-section"> <u> Software </u></a></h3>
-                &emsp; <a href = "#personal-website-section"> <u>Personal Website </u></a><br>
+            <h3><a href = "#software-projects-section"> <u> Software Projects</u></a></h3>
                 &emsp; <a href = "#quad-k-d-trees-section"> <u>Analaysis on Kd-trees vs Quadtrees </u></a><br>
                 &emsp; <a href = "#scheme-interpreter-section"> <u>Scheme Interpreter </u></a>
         </nav>
@@ -39,20 +38,23 @@
                     <div class = "projects-individual-subcontent">
                         <div>
                             <p style = "margin-left: 50px; margin-bottom: 5px;">
-                                <a href = "https://en.wikipedia.org/wiki/Wavelength-division_multiplexing">Wavelength division multiplexers</a> serve as the foundation for fast fiber-optic communication by allowing multiple data streams to be carried over a single fiber.
-                                Each data stream has it's own laser transmitter and these are sent to a optical multiplexer (thin-film filters).  
-                                After exiting a single fiber, this single stream is demultiplexed through the same methods, and recieved on photodiodes.
+                                <a href = "https://en.wikipedia.org/wiki/Wavelength-division_multiplexing">Wavelength division multiplexing (WDM)</a> is a foundational technique in fiber-optic communication that enables multiple data streams to be transmitted simultaneously over a single optical channel by assigning each stream a distinct wavelength.
+                                Each wavelength id independently modulated, optically combined using wavelength-selective elements, transmitted through a shared medium, and then seperated and detected at the reciever
                             </p>
                             <p style = "margin-left: 50px;">
-                                Inspired by this, I built a 3-port WDM, using three laser pointers, two trichroic crystals, photodetectors, and arduinos.
-                                I created a custom communication protocol for the green laser, and utilized Arudino's Serial for communication with the other lasers, which allowed for at least 92% transmission accuracy across all lasers. 
-                                We also printed on Fusion 360 stands to ensure alignment of the lasers and diodes.
-                                Additionally, we experimented with disturbances and data-recoovery code.
+                                Inspired by this principle, I built a three-port optical WDM system using laser points, trichroic crystals, photodetectors, and Arudino-based control.
+                                The trichroic crystals were used to multiplex and demultiplex three laser wavelengths, with each channel implementing independent data transmission.
+                                I developed a custom communication protocl for the green laser and using Arduino Serial communication for the remaining channels, achieving a 92% end-to-end transmission accuracy.
+                                Mechanical alignment was done through custom-desigend mounts modeled in Fusino 360 and 3D printed.
+                                We also evaluated system robustness by introducing optical disturbances and implementing basica data recovery logic. 
                             </p>
                         </div>
-                        <img src = "images/cow_1.jpg">
+                        <div class = "description-slideshow">
+                            <img src = "images/WDM-real.jpg" style = "width: 300px; margin-bottom: 0px;">
+                            <p>Physical setup of the WDM</p>
+                        </div>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center;">
+                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Presentation: <a href="assets/WDM-Presentation.pdf" target = "_blank">Link</a> <br>
                         Code: <a href = "https://github.com/jerry-zh0u/COSMOSCommProject" target = "_blank">Link</a>
                     </p>
@@ -65,21 +67,23 @@
                     <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025</u></p>
                     <div class = "projects-individual-subcontent">
                         <div>
-                            <p style = "margin-left: 50px;">
-                                After learning about how light diffracts in the <a href = "https://sciencenotes.org/double-slit-experiment/">classical double slit experiment</a>, I became fascinated in all the different properties of light.
-                                Building upon the double-slit experiment, I found <a href = "https://faculty.csbsju.edu/frioux/two-slit/PolarDoubleSlit.pdf">this paper</a> explaining the impact of polarization on the experiment. 
-                                This project aimed to re-create this paper and measure the impact of different percentages of polarization.
+                            <p style = "margin-left: 50px; margin-bottom: 5px;">
+                                Building on the <a href = "https://sciencenotes.org/double-slit-experiment/">classical double slit experiment</a>, this project explored the role of polarization in wave interference and its impact on observable diffraction patterns.
+                                Motivated by <a href = "https://faculty.csbsju.edu/frioux/two-slit/PolarDoubleSlit.pdf">prior literature</a> on polarized interference, the goal was to experimentally reproduce and quantify how varying degrees of polarization affect fringe visibility and intensity distribution.
                             </p>
 
                             <p style = "margin-left: 50px">
-                                I used a 650 nm diode laser as my light source, linear and variable polarizers, and a photo-diode connected to an Arduino for data recieval. 
-                                Suprisingly, when the double was polairzed, result behaved like a single slit experiment because the the wave collapsed under observation.
-                                Additionally, I verified Malus's Law by measuring the intensity against the degree of polarization in the lienar polarizer.
+                                The experimental setup used a 650 nm diode laser, linear and variable polarizers, and a photodiode connected to an Arduino-based data acquisition system. 
+                                By varying polarization states, I observed that introducing polarization aligned with slit infromation caused the interference pattern to collapse into a single-slit-like distribution, consistent with theoretical predictions.
+                                In addition, I experimentally verified Malus's Law by measuring transmitted intensity as a function of polarizer angle. This project emphasized experimental reproductibility, quantitative measurement, and comparison against analytical models.
                             </p>
                         </div>
-                        <img src = "images/cow_1.jpg">
+                        <div class = "description-slideshow">
+                            <img src = "images/polarized-double-slit-real.jpg" style = "width: 300px; margin-bottom: 0px;">
+                            <p>Physical setup of the Polarized Double Slit</p>
+                        </div>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center;">
+                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Paper: <a href="assets/Physics-IA.pdf" target = "_blank">Link</a> <br>
                     </p>
                 </div>
@@ -89,24 +93,7 @@
                 <h1 style = "scroll-margin-top: 100px;" id = "software-projects-section">
                     Software Projects
                 </h1>
-                <div class = "personal-website">
-                    <h2 style = "margin-left: 50px;" id = "personal-website-section">
-                       Personal Website:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2026</u></p>
-                    <div class = "projects-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px; margin-bottom: 5px;">
-                                
-                            </p>
-                        </div>
-                        <img src = "images/cow_1.jpg">
-                    </div>
-                    <p style = "margin-left: 50px; text-align: center;">
-                        Code: <a href = "https://github.com/jerry-zh0u/COSMOSCommProject" target = "_blank">Link</a>
-                    </p>
-                </div>
-                
+
                 <div class = "quad-k-d-trees">
                     <h2 style = "margin-left: 50px;" id = "quad-k-d-trees-section">
                         Analysis on K-d Trees vs Quadtrees:
@@ -114,11 +101,26 @@
                     <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Spring 2025</u></p>
                     <div class = "projects-individual-subcontent">
                         <div>
-                            
+                            <p style = "margin-left: 50px; margin-bottom: 5px;">
+                                This projecte investigated the performance trade-offs between k-d trees and quadtress for spatial data storage and query operations. 
+                                I implemented both data structures from scratch in Java, supporting insertion, deletion, nearest-neighbor search, range queries, and rebalancing.
+                            </p>
+                            <p style = "margin-left: 50px; margin-bottom: 5px;">                                
+                                To optimize space and query efficiency, each tree was initially constructed by partitioning around the median of the dataset, followed by periodic rebalancing.
+                                Median selection was implemented using a modified <a href = "https://en.wikipedia.org/wiki/Median_of_medians">median of medians algorithm</a> to achieve a deterministic performance without recursive subdivision.
+                                Through benchmarking across varying dataset densities and query types, I observed that performance depended strongly on dimensionality and rebalancing strategy.
+                                While quadtrees performed competitively in low-dimensional, structured datasets, k-d trees demonstrated superior scalability into higher-dimensional spaces, with measured performance gains of approximately 7% on dense, non-unform 2d-datasets.
+
+                                For my implementation of these data-structures, I found that the efficiency of quadtrees and k-d trees were dependent on operation and rebalancing steps.
+                                However, for larger dimensional data k-d trees are easily extendable, whereas its harder/not efficient to extend higher dimensional data into quadtrees
+                            </p>
                         </div>
-                        <img src = "images/cow_1.jpg">
+                        <div class = "description-slideshow">
+                            <img src = "images/trees.jpg" style = "width: 300px; margin-bottom: 0px;">
+                            <p>Picture of Trees and Bessie with her friends</p>
+                        </div>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center;">
+                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Paper: <a href="assets/CompSci-EE.pdf" target = "_blank">Link</a> <br>
                         Code: <a href = "https://github.com/jerry-zh0u/Analysis-of-K-d-Trees-and-Quadtrees" target = "_blank">Link</a>
                     </p>
@@ -131,10 +133,25 @@
                     <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Fall 2025</u></p>
                     <div class = "projects-individual-subcontent">
                         <div>
-                            
+                            <p style = "margin-left: 50px;">
+                                I developed a fully functional interpreter for the Scheme programming language in Python, implementing core language features including expression parsing, evaluation, and environment management.
+                                The interpreter supports both lexical and dynamic scoping through chained environments, enabling correct handling of closures and variable resolution.
+                                Additionally functionality includes user-defined procedures, arithmetic and logical primitives, and higher-order functions, adhering closely to Scheme's evaluation semantics.
+                            </p>
+                            <p style = "margin-left: 50px;">
+                                Enjoy a piece of art I made with the interpreter via an external Turtle graphics interface, earning fifth in a class-wide programming competition
+                            </p>
                         </div>
-                        <img src = "images/cow_1.jpg">
+                        <div class = "description-slideshow">
+                            <video width = "300px" controls>
+                                <source src = "images/scheme-contest.mp4" type = "video/mp4">
+                            </video>
+                            <p>Video of Scheme Art</p>
+                        </div>
                     </div>
+                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                        Art Source Code: <a href = "assets/contest.scm" target = "_blank">Link</a>
+                    </p>
                 </div>
             </div>
         </main>

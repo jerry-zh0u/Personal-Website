@@ -5,7 +5,7 @@
     </head>
     <body>
         <header class="site-header">
-            <div class="name">Jerry Zhou🐄</div>
+            <div class="name"> <a href = "index.html" style = "text-decoration: none; color: black;">Jerry Zhou🐄</a></div>
 
             <nav class = "header-nav">
                 <a href = "index.html">Home</a>
@@ -17,12 +17,12 @@
         </header>
 
         <nav class = "experience-menu">
-            <h3><a href = "experience.html"> <u> Menu </u></a></h3>
             <h3><a href = "#research-section"> <u> Research </u></a></h3>
-                &emsp; <a href = "#bml-section"> <u>Biomimetic Millisystems Lab <span>(BML)</span></u></a>
+                &emsp; <a href = "#bml-section"> <u>Biomimetic Millisystems Lab (BML)</u></a>
             <h3><a href = "#professional-section"> <u> Professoinal Experience </u></a></h3>
-                &emsp; <a href = "#feb-section"> <u>Formula Electric @ Berkeley <span>(FEB)</span></u></a> <br>
-                &emsp; <a href = "#esb-section"> <u>Engineering Solutions @ Berkeley  <span>(ESB)</span></u></a>
+                &emsp; <a href = "#feb-section"> <u>Formula Electric @ Berkeley (FEB)</u></a> <br>
+                &emsp; <a href = "#esb-section"> <u>Engineering Solutions @ Berkeley (ESB)</u></a> <br>
+                &emsp; <a href = "#independent-contractor-section"> <u>Independent Contractor</u></a>
             <h3><a href = "#other-section"> <u> Other </u></a></h3>
                 &emsp; <a href = "#hs-section"> <u>High School Quests</u></a>
         </nav>
@@ -36,9 +36,9 @@
                     <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (October 2025-present)</u></p>
                     <div class = "experience-individual-subcontent">
                         <p style = "margin-left: 50px;">
-                            I am conducting research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on creating a digital simulation for a 7 degree of freedom MRI Robotic arm on CoppeliaSim. 
-                            Having already developed a PD controlled arm, I am implementing a disturbance observer to ensure further stability and safety inside the MRI bore. 
-                            To do so I am using bond graphs and transfer functions to derive a steady-state space model for the velocity controlled ultrasonic motors controlling the arm.
+                            I conduct research at BML under Dr. Ronald Fearing and Dr. John Atkins, focused on developing a high-fidelity simulation of a 7-degree-of-freedom MRI-comptabile robotic arm in CoppeliaSim.
+                            I implemented a PD-controlled model of the arm and am extending it to a impedance controller with a disturbance observe to improve stability and safety during operation inside the MRI bore.
+                            To accurately capture actuator behavior, I derive velocity-domain system models for ultrasonic motors using bond graphs and transfer-functions, enabilign realistic simulation of actuator dynamcis and control performance.
                         </p>
                         <img src = "images/BML Logo.jpg">
                     </div>
@@ -54,14 +54,13 @@
                     <div class = "experience-individual-subcontent">
                         <div>
                             <p style = "margin-left: 50px; margin-bottom: 5px;">
-                                I am currently designing and validating the Segment Board to monitor our 1403p battery pack. There are 10 segment boards, each monitoring 14 cells.
-                                This 4-layer PCB serves as the "brains" for all our battery control.
-                                It houses the logic through the ADBMS chip reading in voltage through a board to board connection and temperature values through ribbon cables and muxxing. 
-                                Additionally it communicates with other boards through isoSPI and CAN protocols.
+                                I am currently designing and validating a 4-layer segment-level battery management system (BMS) PCB for a custom 140s3p accumulator, where each segment board monitors fourteen cells.
+                                The segment board serves as teh primary control and monitoring unit at the module leve, integrating ADBMS ICs for cell voltage measurements via board-to-board connections and multiplexed temperature sensing through ribbon cables.
+                                The system communicates with adjacent boards using isoSPI and CAN, providing robust data transfer and isolation in a high-voltage environment.
                             </p>
                             <p style = "margin-left: 50px;">
-                                Validation will be powered by a resistor divider from 52V to simulate one battery pack (14 cells each nominal 3V3). 
-                                Balancing will be tested by deploying STM32 code onto another board which will transmite signals over isoSPI to the ADBMS chip.
+                                To validate the design, I sumulate fourteen-cell battery segment using a resistor-divider network stepping down from 52V and verify voltage measurement accuracy and fault behavior. 
+                                Cell balacning functionality is tested by deploying STM32 firmware on a companion controller board, which transmits balancing commnads over isoSPI to the ADBMS IC, enabling end-to-end verification of monitoring and control paths.
                             </p>
                         </div>
                         
@@ -97,11 +96,13 @@
                     <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant (September - December 2025): Magnitude.io</u></p>
                     <div class = "experience-individual-subcontent">
                         <p style = "margin-left: 50px;">
-                            We were tasked to construct a random positioning machine to simulate zero-gravity on Earth for fungi by Magnitude.io. 
-                            I designed a two layer PCB and housing containing an ESP-32, terminal blocks for signal/power for our components (optical encoder, motor driver, etc.), and USB-C port. 
-                            This board took in 12V and stepped it down to 5V and 3V3. 
-                            It had I2C protocol to communicate with a Raspberry Pi, and 8-bit and SPI protocol to communicate with the Adafruit Capacitive Touch Display.
-                            Additionally, I helped to develop random paths with random Fourier Transforms and Psuedo-Random Binary Sequence using encoder data. 
+                            I worked with a multidisciplinary team to develop a random positionig machine designed to simulate microgravity conditions for fungal growth experiments on Earth.
+                            I designed a two-layer control PCB and mechanical housing integrating an ESP32, terminal blocks for power and signal interfaces (including an optical encoder and motor driver), and a USB-C interface.
+                            The board accepts a 12V input and generates regulated 5V and 3.3V rails for system operation.
+                        </p>
+                        <p style = "margin-left: 50px;">
+                            The controller communicates with a Raspberry PI over 12C and interfaces with an Adafruit capacitive touch display using SPI and GPIO. 
+                            In addition, I contributed to the development of randomized motion trajectories using Fourier-series-based methods and pseudo-random binary sequences, leveraging encoder feedback to generate continuously varying orientation paths.
                         </p>
                         <div class = "slideshow esb-slideshow">
                             <div class = "img-info">
@@ -120,6 +121,25 @@
                         </div>
                     </div>
                 </div>
+
+                <div class = "independent-contractor">
+                    <h2 style = "margin-left: 50px;" id = "independent-contractor-section">
+                        Independent Contractor:
+                    </h2>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Test and Validation Engineer (December 2025 - January 2026): GMEP Engineers</u></p>
+                    <div class = "experience-individual-subcontent">
+                        <p style = "margin-left: 50px;">
+                            As an independent contractor, I executed hardware bring-up and debugged over fifty 2-layer PCBs built around ATmega328p microcontrollers.
+                            These boards integrated isolated AC-DC conversion, onboard rectification, and regualted 5V and 3.3V power rails.
+                            Using oscilloscopes and multimeters, I verified power integrity, regulation stability, and MCU operation.
+                            In parallel, I implemented a solar panel telemetry system that collected current data, displayed it onto LCD interfaces, and transmitted over Wi-Fi for remote monitoring.
+                        </p>
+                        <div>
+                            <img src = "images/independent-contractor-boards.jpg" style = "width: 300px;">
+                            <p style = "margin-top: -30px; font-size: 18px; text-align: center;">Some of the boards that I brought up and validated</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class = "other-experience">
                 <h1 style = "scroll-margin-top: 100px;" id = "other-section">Other</h1>
@@ -130,10 +150,10 @@
 
                     <div class = "experience-individual-subcontent">
                         <div style = "margin-left: 50px; font-size: 1.2rem;">
-                            During my junior and senior year, I was the lead programmer and <span style = "white-space: nowrap;">co-president</span> of our robotics team, team 5805.
-                            I created our team's first swerve drive, camera tracking system using PhotonVision, and autonomous routine with PathPlanner.
-                            Additionally, I helped wire the robot and machine parts for our telescopic elevator. 
-                            This eventually led to our program's first one in seven years (go eagles)! 
+                            During my junior and senior years of high school, I was the lead programmer and <span style = "white-space: nowrap;">co-president</span> of our robotics team, team 5805.
+                            I led the development of our team's first swerve drive, implemented vision-based target tracking using PhotonVision, and developed autonomous routines with PathPlanner.
+                            Additionally, I helped wire the robot and machine parts for our telescopic elevator and chassis subsystems. 
+                            This eventually led to our program's first one in seven years. 
                             <br><br>
                             I also competed in academic competitions: 
                             <ul style = "margin-left: 20px;">

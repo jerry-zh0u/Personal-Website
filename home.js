@@ -11,9 +11,13 @@ function setupFEBImageSlide(){
         {src: "images/segment-board-bottom-layer.png", description: "Segment Board 4th Layer (Signal Traces)"}
     ];
     // const febSlide = document.getElementById("slideshow");
-    const febSlide = document.querySelector(".feb-slideshow")
+    const febSlide = document.querySelector(".feb-slideshow");
+    if(!febSlide){
+        return;
+    }
+
     const febImg = febSlide.querySelector(".img-slideshow");
-    const febText = febSlide.querySelector(".description-slideshow")
+    const febText = febSlide.querySelector(".description-slideshow");
 
     const imgNext = febSlide.querySelector(".right");
     const imgPrev = febSlide.querySelector(".left");
@@ -53,9 +57,13 @@ function setupESBImageSlide(){
         {src: "images/RPM-layer2.png", description: "RPM Board 2nd Layer (Signal Traces)"}
     ];
     // const febSlide = document.getElementById("slideshow");
-    const esbSlide = document.querySelector(".esb-slideshow")
+    const esbSlide = document.querySelector(".esb-slideshow");
+    if(!esbSlide){
+        return;
+    }
+
     const esbImg = esbSlide.querySelector(".img-slideshow");
-    const esbText = esbSlide.querySelector(".description-slideshow")
+    const esbText = esbSlide.querySelector(".description-slideshow");
 
     const imgNext = esbSlide.querySelector(".right");
     const imgPrev = esbSlide.querySelector(".left");
@@ -93,9 +101,13 @@ function setupHSImageSlide(){
         {src: "images/robotics-robot.jpg", description: ""},
     ];
     // const febSlide = document.getElementById("slideshow");
-    const hsSlide = document.querySelector(".hs-slideshow")
+    const hsSlide = document.querySelector(".hs-slideshow");
+    if(!hsSlide){
+        return;
+    }
+
     const hsImg = hsSlide.querySelector(".img-slideshow");
-    const hsText = hsSlide.querySelector(".description-slideshow")
+    const hsText = hsSlide.querySelector(".description-slideshow");
 
     const imgNext = hsSlide.querySelector(".right");
     const imgPrev = hsSlide.querySelector(".left");

@@ -149,6 +149,12 @@ function cowAnimate(){
     if(pos > window.innerWidth - cowWidth - deadband || pos < deadband){
         direction *= -1
 
+        if(pos > window.innerWidth - cowWidth - deadband){
+            pos = window.innerWidth - cowWidth - deadband - 1
+        }else{
+            pos = deadband + 1
+        }
+
         if(direction === 1){
             cow.style.transform = "scaleX(1)"
         }

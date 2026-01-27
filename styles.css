@@ -118,8 +118,9 @@ body {
 
 .courses{
     width: 100%;
-    max-width: 900px;
-    margin: 120px auto 0 auto;
+    /* max-width: 900; */
+    /* margin: 120px auto 0 auto; */
+    padding: 20px;
 
     flex: 1;
 }
@@ -258,12 +259,16 @@ body {
 .course-grid{
     justify-content: center;
     display:grid;
+
+    max-width: 1200px;
     
-    grid-template-columns: repeat(2, 550px);
-    grid-template-rows: repeat(1, 225px);
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-auto-rows: auto;
     gap: 50px;
 
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+
+    /* display:1; */
 }
 
 .course-grid-cell{
@@ -324,6 +329,7 @@ body {
     text-align: center;
 
     margin-top:-30px;
+    margin-right: 20px;
     padding-top:0px;
 }
 

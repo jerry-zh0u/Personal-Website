@@ -4,6 +4,7 @@ const speed = 0.2;
 
 function setupFEBImageSlide(){
     const febImageList = [
+        {src: "images/segment-real.jpg", description: "Printed Segment Board"},
         {src: "images/segment-board-3d-view.png", description: "Segment Board 3d View"},
         {src: "images/segment-board-top-view.png", description: "Segment Board 1st Layer (Power Traces + Signal Traces)"},
         {src: "images/segment-board-layer-2.png", description: "Segment Board 2nd Layer (Minimal Power Traces + Signal Traces)"},

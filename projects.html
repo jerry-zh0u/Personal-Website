@@ -24,6 +24,7 @@
                 &emsp; <a href = "#wdm-section"> <u>Wavelength Division Multiplexer <span>(WDM)</span></u></a><br>
                 &emsp; <a href = "#double-slit-section"> <u>Polarized Double Slit Experiment </u></a>
             <h3><a href = "#software-projects-section"> <u> Software Projects</u></a></h3>
+                &emsp; <a href = "#f1-model-section"> <u>Formula One Model </u></a><br>
                 &emsp; <a href = "#quad-k-d-trees-section"> <u>Analaysis on Kd-trees vs Quadtrees </u></a><br>
                 &emsp; <a href = "#scheme-interpreter-section"> <u>Scheme Interpreter </u></a> <br>
                 &emsp; <a href = "#website-section"> <u>Personal Website </u></a>
@@ -58,7 +59,7 @@
                             <p>Physical setup of the WDM</p>
                         </div>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Presentation: <a href="assets/WDM-Presentation.pdf" target = "_blank">Link</a> <br>
                         Source Code: <a href = "https://github.com/jerry-zh0u/COSMOSCommProject" target = "_blank">Link</a>
                     </p>
@@ -68,7 +69,7 @@
                     <h2 style = "margin-left: 50px;" id = "double-slit-section">
                         Polarized Double Slit Experiment:
                     </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025</u></p>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2024/2025</u></p>
                     <div class = "projects-individual-subcontent">
                         <div>
                             <p style = "margin-left: 50px; margin-bottom: 5px;">
@@ -87,7 +88,7 @@
                             <p>Physical setup of the Polarized Double Slit</p>
                         </div>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Paper: <a href="assets/Physics-IA.pdf" target = "_blank">Link</a> <br>
                     </p>
                 </div>
@@ -97,6 +98,41 @@
                 <h1 style = "scroll-margin-top: 100px;" id = "software-projects-section">
                     Software Projects
                 </h1>
+
+                <div class = "f1-model">
+                    <h2 style = "margin-left: 50px;" id = "f1-model-section">
+                        Formula One Prediction Model:
+                    </h2>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025/2026</u></p>
+                    <div class = "projects-individual-subcontent">
+                        <div>
+                            <p style = "margin-left: 50px; margin-bottom: 5px;">
+                                This project started from my interest of F1 (Essere Ferrari) as well as wanting to learn more about ML.
+                                The goal of this model is to predict the finishing order of drivers using historical race data. 
+                                <br>
+
+                                I trained a gradient-boosted decision tree model (LightGBM), selected for tis strong performance on tabular data, ability to model nonlinear feature interactoins, and built-in regularization.
+                                Input features inclued lap times, grid position, track conditions, and environmental variables.
+                                Because race outcome prediction is a ranking problem, the NDCG@1/3/10 metric was chosen as it emphasized correctness within meaninful outcome groups (winner, podium, points), rather than individual classification accuracy
+
+                                <br>
+                                Furthermore, the features were engineered with shifted windows in pandas to prevent data leakage, so that only information avilable prior to each race was used for prediction.
+                                The final model utilized 16 temporal features and achieved NDCG@1/3/10 scores of 0.98, 0.97, and 0.94 respectively.
+                                <br>
+                                Currently, I am trying to predict average race times using a seperate LSTM model architecture, that could also serve as another temporal feature to model my results. 
+                                Additionally, I am performing robustness checks and validation experiments to investigate potential sources of my overly optimistic performance to ensure that the model generalizes beyond the training data.
+                            </p>
+                        </div>
+                        <div class = "description-slideshow">
+                            <img src = "images/cow-car.webp" style = "width: 300px; margin-bottom: 0px;">
+                            <p>Picture of Bessie racing</p>
+                        </div>
+                    </div>
+                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                        Source Code: <a href = "https://github.com/jerry-zh0u/Formula-One-Model" target = "_blank">Link</a> <br>
+                        Dataset: <a href = "https://www.kaggle.com/datasets/jtrotman/formula-1-race-data">Link</a>
+                    </p>
+                </div>
 
                 <div class = "quad-k-d-trees">
                     <h2 style = "margin-left: 50px;" id = "quad-k-d-trees-section">
@@ -124,7 +160,7 @@
                             <p>Picture of Trees and Bessie with her friends</p>
                         </div>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Paper: <a href="assets/CompSci-EE.pdf" target = "_blank">Link</a> <br>
                         Source Code: <a href = "https://github.com/jerry-zh0u/Analysis-of-K-d-Trees-and-Quadtrees" target = "_blank">Link</a>
                     </p>
@@ -153,7 +189,7 @@
                             <p>Video of Scheme Art</p>
                         </div>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                    <p style = "margin-left: 50px;margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Art Source Code: <a href = "assets/contest.scm" target = "_blank">Link</a>
                     </p>
                 </div>
@@ -162,13 +198,13 @@
                     <h2 style = "margin-left: 50px;" id = "website-section">
                         Personal Website:
                     </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2026</u></p>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025/2026</u></p>
                     <div class = "projects-individual-subcontent">
                         <p style = "margin-left: 50px">
                             This website! It Utilizes HTML, CSS, and Javascript as the tech stack to create a responsive UI/UX that showcases my portfolio through links, images, and descriptions.
                         </p>
                     </div>
-                    <p style = "margin-left: 50px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
                         Source Code: <a href = "https://github.com/jerry-zh0u/Personal-Website" target = "_blank">Link</a>
                     </p>
                 </div>

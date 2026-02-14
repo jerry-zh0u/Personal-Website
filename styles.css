@@ -380,3 +380,39 @@ body {
 .full-screen.hidden{
     display:none;
 }
+
+.project-button-grid{
+    display: grid;
+    margin-left: 70px;
+    grid-template-columns: 12rem;
+    gap: 10px;
+    /* margin-top:10px; */
+}
+.custom-grid-btn {
+    width: 12rem;
+    /* height:4rem; */
+    color:black;
+    font:inherit;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.custom-grid-btn:hover {
+    background-color: #8f8f8f;
+    transform: scale(1.05);
+}
+
+.custom-grid-btn.active {
+    background-color: #c4c4c4;
+    transform: scale(0.98);
+}
+
+/* #ib-message-display {
+    white-space: pre-line;
+} */

@@ -20,14 +20,15 @@
         </header>
 
         <nav class = "experience-menu">
-            <h3><a href = "#research-section"> <u> Research </u></a></h3>
-                &emsp; <a href = "#bml-section"> <u>Biomimetic Millisystems Lab (BML)</u></a>
-            <h3><a href = "#professional-section"> <u> Professoinal Experience </u></a></h3>
-                &emsp; <a href = "#feb-section"> <u>Formula Electric @ Berkeley (FEB)</u></a> <br>
-                &emsp; <a href = "#esb-section"> <u>Engineering Solutions @ Berkeley (ESB)</u></a> <br>
-                &emsp; <a href = "#independent-contractor-section"> <u>Innovative Building Energy Control</u></a>
-            <h3><a href = "#other-section"> <u> Other </u></a></h3>
-                &emsp; <a href = "#hs-section"> <u>High School Quests</u></a>
+            <h3><a href = "#research-section"> Research </a></h3>
+                &emsp; <a href = "#bml-section"> Biomimetic Millisystems Lab (BML)</a><br>
+                &emsp; <a href = "#fedyk-section"> Berkeley Haas School of Buisness</a>
+            <h3><a href = "#professional-section">  Professoinal Experience </a></h3>
+                &emsp; <a href = "#feb-section"> Formula Electric at Berkeley (FEB)</a> <br>
+                &emsp; <a href = "#esb-section"> Engineering Solutions at Berkeley (ESB)</a> <br>
+                &emsp; <a href = "#independent-contractor-section"> Innovative Building Energy Control</a>
+            <h3><a href = "#other-section">  Other </a></h3>
+                &emsp; <a href = "#hs-section"> High School Quests</a>
         </nav>
         <main class = "experience-content" id = "main-experience">
             <div class = "research-expereince">
@@ -38,12 +39,34 @@
                     </h2>
                     <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (October 2025-present)</u></p>
                     <div class = "experience-individual-subcontent">
-                        <p style = "margin-left: 50px;">
-                            I conduct research under Dr. Ronald Fearing and Dr. John Atkins, focused on developing a high-fidelity simulation (digital twin) of a 7-degree-of-freedom MRI-compatibile robotic arm in CoppeliaSim.
-                            I have implemented and evaluated multiple control schemes such as PD and impedance controllers with disturbance observers derived from analytical robotics and control theory literature (velocity-space impedance control, joint-space dynamics, and Jacobian-based kinematic mappings).
-                            Currently, I am integrating MoveIt as a planning-only tool nby consuming its generated trajectories within a Python script that uses ZeroMQ to drive simulation and validation in CoppeliaSim.
-                        </p>
+                        <div>
+                            <p style = "margin-left: 50px; margin-bottom:10px">
+                                I conduct research under Prof. Ronald Fearing and Dr. John Atkins at the Biomimetic Millisystems Lab, developing control systems for a 7-DOF MRI-compatible robotic arm. 
+                                My work spans embedded firmware, real-time control, hardware bring-up, and high-fidelity simulation.
+                            </p>
+                            <p style = "margin-left: 50px; margin-bottom:10px">
+                                I implemented PD and impedance controllers with disturbance observers in CoppeliaSim, leveraging joint-space dynamics and Jacobian-based mappings. 
+                                Additionally, I have integrated ROS2, MoveIt, and CoppeliaSim for motion planning, consuming trajectories via a Python-ZeroMQ bridge for simulation validation.
+                                Furthermore, I develop low-level embedded firmware for ultrasonic motor control and perform PCB bring-up for arm encoder and pressure sensor boards. 
+                                To accelerate simulation workflows, I've optimized numerical computations using JAX/XLA with automatic differentiation and vectorization, achieving 2x throughput improvements.
+                            </p>
+                            <p style = "margin-left: 50px; margin-bottom:10px">
+                                My development stack includes Ubuntu, Linux, ROS2, and profiling tools to identify bottlenecks in control loops and physics simulation pipelines.
+                            </p>
+                        </div>
                         <img src = "images/BML Logo.jpg">
+                    </div>
+                </div>
+                <div class = "Fedyk-Lab">
+                    <h2 style = "margin-left: 50px;" id = "fedyk-section"> 
+                        Berkeley Haas School of Buisness:
+                    </h2>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (February 2026-present)</u></p>
+                    <div class = "experience-individual-subcontent">
+                        <p style = "margin-left: 50px;">
+                            I conduct research under Prof. Anastassia Fedyk relating to cleaning and classiyfing big data for machine learning models. More on the way!
+                        </p>
+                        <img src = "images/haas-logo.png">
                     </div>
                 </div>
             </div>
@@ -56,13 +79,13 @@
                     <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Accumulator Electrical Engineer (October 2025-present)</u></p>
                     <div class = "experience-individual-subcontent">
                         <div>
-                            <p style = "margin-left: 50px; margin-bottom: 5px;">
+                            <p style = "margin-left: 50px; margin-bottom: 10px;">
                                 I am currently designing and validating a 4-layer segment-level battery management system (BMS) PCB for a custom 140s3p accumulator, where each segment board monitors fourteen cells.
-                                The segment board serves as teh primary control and monitoring unit at the module leve, integrating ADBMS ICs for cell voltage measurements via board-to-board connections and multiplexed temperature sensing through ribbon cables.
+                                The segment board serves as the primary control and monitoring unit at the module leve, integrating ADBMS ICs for cell voltage measurements via board-to-board connections and multiplexed temperature sensing through ribbon cables.
                                 The system communicates with adjacent boards using isoSPI and CAN, providing robust data transfer and isolation in a high-voltage environment.
                             </p>
                             <p style = "margin-left: 50px;">
-                                To validate the design, I sumulate fourteen-cell battery segment using a resistor-divider network stepping down from 52V and verify voltage measurement accuracy and fault behavior. 
+                                To validate the design, I simulate fourteen-cell battery segment using a resistor-divider network stepping down from 52V and verify voltage measurement accuracy and fault behavior. 
                                 Cell balacning functionality is tested by deploying STM32 firmware on a companion controller board, which transmits balancing commnads over isoSPI to the ADBMS IC, enabling end-to-end verification of monitoring and control paths.
                             </p>
                         </div>
@@ -96,10 +119,33 @@
                     <h2 style = "margin-left: 50px;" id = "esb-section">
                         Engineering Solutions at Berkeley <span>(ESB)</span>:
                     </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant (September - December 2025): Magnitude.io</u></p>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Senior Engineering Consultant (January 2026 - Present): TBD</u></p>
                     <div class = "experience-individual-subcontent">
                         <div>
                             <p style = "margin-left: 50px;">
+                                More to Come!
+                            </p>
+                        </div>
+                        <!-- <div class = "slideshow esb-slideshow"> -->
+                            <!-- <div class = "img-info">
+                                <button class = "nav-button left">
+                                    &#10094;
+                                </button>
+                                <img class = "img-slideshow">
+                                <button class = "nav-button right">
+                                    &#10095;
+                                </button>
+                            </div>
+                            <div class = "description-slideshow"></div>
+                            <!-- <button class = "expand-button">
+                                Expand
+                            </button> -->
+                        <!-- </div> -->
+                    </div>
+                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant (September - December 2025): Magnitude.io</u></p>
+                    <div class = "experience-individual-subcontent">
+                        <div>
+                            <p style = "margin-left: 50px; margin-bottom:10px">
                                 I worked with a multidisciplinary team to develop a random positionig machine designed to simulate microgravity conditions for fungal growth experiments on Earth.
                                 I designed a two-layer control PCB and mechanical housing integrating an ESP32, terminal blocks for power and signal interfaces (including an optical encoder and motor driver), and a USB-C interface.
                                 The board accepts a 12V input and generates regulated 5V and 3.3V rails for system operation.
@@ -165,7 +211,7 @@
                                 <li>USA Computing Olympiad Gold Qualifer</li>
                                 <li>American Invitational Mathematics Exam Qualifier</li>
                                 <li>American Computer Science League Bronze Medalist</li>
-                            </ul>
+                            </ul><br>                            
                         </div>
                         <div class = "slideshow hs-slideshow">
                             <div class = "img-info">

@@ -32,219 +32,224 @@
             </nav>
         </header>
 
-        <nav class = "experience-menu">
-            <h3><a href = "#research-section"> Research </a></h3>
-                <a href = "#bml-section"> Biomimetic Millisystems Lab (BML)</a>
-                <a href = "#fedyk-section"> Berkeley Haas School of Buisness</a>
-            <h3><a href = "#professional-section">  Professoinal Experience </a></h3>
-                <a href = "#feb-section"> Formula Electric at Berkeley (FEB)</a> 
-                <a href = "#esb-section"> Engineering Solutions at Berkeley (ESB)</a> 
-                <a href = "#independent-contractor-section"> Innovative Building Energy Control</a>
-            <h3><a href = "#other-section">  Other </a></h3>
-                <a href = "#hs-section"> High School Quests</a>
-        </nav>
-        <main class = "experience-content" id = "main-experience">
-            <div class = "research-expereince">
-                <h1 style = "scroll-margin-top: 100px;" id = "research-section">Research</h1>
-                <div class = "BML">
-                    <h2 style = "margin-left: 50px;" id = "bml-section"> 
-                        Biomimetic Millisystems Lab (BML):
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (October 2025-present)</u></p>
-                    <div class = "experience-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px; margin-bottom:10px">
-                                I conduct research under Prof. Ronald Fearing and Dr. John Atkins at the Biomimetic Millisystems Lab, developing control systems for a 7-DOF MRI-compatible robotic arm. 
-                                My work spans embedded firmware, real-time control, hardware bring-up, and high-fidelity simulation.
-                            </p>
-                            <p style = "margin-left: 50px; margin-bottom:10px">
-                                I implemented PD and impedance controllers with disturbance observers in CoppeliaSim, leveraging joint-space dynamics and Jacobian-based mappings. 
-                                Additionally, I have integrated ROS2, MoveIt, and CoppeliaSim for motion planning, consuming trajectories via a Python-ZeroMQ bridge for simulation validation.
-                                Furthermore, I develop low-level embedded firmware for ultrasonic motor control and perform PCB bring-up for arm encoder and pressure sensor boards. 
-                                To accelerate simulation workflows, I've optimized numerical computations using JAX/XLA with automatic differentiation and vectorization, achieving 2x throughput improvements.
-                            </p>
-                            <p style = "margin-left: 50px; margin-bottom:10px">
-                                My development stack includes Ubuntu, Linux, ROS2, and profiling tools to identify bottlenecks in control loops and physics simulation pipelines.
-                            </p>
-                        </div>
-                        <img src = "images/BML Logo.jpg">
-                    </div>
-                </div>
-                <div class = "Fedyk-Lab">
-                    <h2 style = "margin-left: 50px;" id = "fedyk-section"> 
-                        Berkeley Haas School of Buisness:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (February 2026-present)</u></p>
-                    <div class = "experience-individual-subcontent">
-                        <p style = "margin-left: 50px;">
-                            I conduct research under Prof. Anastassia Fedyk relating to cleaning and classiyfing big data for machine learning models. More on the way!
-                        </p>
-                        <img src = "images/haas-logo.png">
-                    </div>
-                </div>
+        <div class = "page-layout">
+            <div class = "menu-column">
+                <nav class = "experience-menu">
+                    <h3><a href = "#research-section"> Research </a></h3>
+                        <a href = "#bml-section"> Biomimetic Millisystems Lab (BML)</a>
+                        <a href = "#fedyk-section"> Berkeley Haas School of Buisness</a>
+                    <h3><a href = "#professional-section">  Professoinal Experience </a></h3>
+                        <a href = "#feb-section"> Formula Electric at Berkeley (FEB)</a> 
+                        <a href = "#esb-section"> Engineering Solutions at Berkeley (ESB)</a> 
+                        <a href = "#independent-contractor-section"> Innovative Building Energy Control</a>
+                    <h3><a href = "#other-section">  Other </a></h3>
+                        <a href = "#hs-section"> High School Quests</a>
+                </nav>
             </div>
-            <div class = "professional-experience">
-                <h1 style = "scroll-margin-top: 100px;" id = "professional-section">Professional Experiences</h1>
-                <div class = "FEB">
-                    <h2 style = "margin-left: 50px;" id = "feb-section">
-                        Formula Electric at Berkeley <span>(FEB)</span>:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Accumulator Electrical Engineer (October 2025-present)</u></p>
-                    <div class = "experience-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px; margin-bottom: 10px;">
-                                I am currently designing and validating a 4-layer segment-level battery management system (BMS) PCB for a custom 140s3p accumulator, where each segment board monitors fourteen cells.
-                                The segment board serves as the primary control and monitoring unit at the module leve, integrating ADBMS ICs for cell voltage measurements via board-to-board connections and multiplexed temperature sensing through ribbon cables.
-                                The system communicates with adjacent boards using isoSPI and CAN, providing robust data transfer and isolation in a high-voltage environment.
-                            </p>
+            
+            <main class = "experience-content" id = "main-experience">
+                <div class = "research-expereince">
+                    <h1 style = "scroll-margin-top: 100px;" id = "research-section">Research</h1>
+                    <div class = "BML">
+                        <h2 style = "margin-left: 50px;" id = "bml-section"> 
+                            Biomimetic Millisystems Lab (BML):
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (October 2025-present)</u></p>
+                        <div class = "experience-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px; margin-bottom:10px">
+                                    I conduct research under Prof. Ronald Fearing and Dr. John Atkins at the Biomimetic Millisystems Lab, developing control systems for a 7-DOF MRI-compatible robotic arm. 
+                                    My work spans embedded firmware, real-time control, hardware bring-up, and high-fidelity simulation.
+                                </p>
+                                <p style = "margin-left: 50px; margin-bottom:10px">
+                                    I implemented PD and impedance controllers with disturbance observers in CoppeliaSim, leveraging joint-space dynamics and Jacobian-based mappings. 
+                                    Additionally, I have integrated ROS2, MoveIt, and CoppeliaSim for motion planning, consuming trajectories via a Python-ZeroMQ bridge for simulation validation.
+                                    Furthermore, I develop low-level embedded firmware for ultrasonic motor control and perform PCB bring-up for arm encoder and pressure sensor boards. 
+                                    To accelerate simulation workflows, I've optimized numerical computations using JAX/XLA with automatic differentiation and vectorization, achieving 2x throughput improvements.
+                                </p>
+                                <p style = "margin-left: 50px; margin-bottom:10px">
+                                    My development stack includes Ubuntu, Linux, ROS2, and profiling tools to identify bottlenecks in control loops and physics simulation pipelines.
+                                </p>
+                            </div>
+                            <img src = "images/BML Logo.jpg">
+                        </div>
+                    </div>
+                    <div class = "Fedyk-Lab">
+                        <h2 style = "margin-left: 50px;" id = "fedyk-section"> 
+                            Berkeley Haas School of Buisness:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Undergraduate Researcher (February 2026-present)</u></p>
+                        <div class = "experience-individual-subcontent">
                             <p style = "margin-left: 50px;">
-                                To validate the design, I simulate fourteen-cell battery segment using a resistor-divider network stepping down from 52V and verify voltage measurement accuracy and fault behavior. 
-                                Cell balacning functionality is tested by deploying STM32 firmware on a companion controller board, which transmits balancing commnads over isoSPI to the ADBMS IC, enabling end-to-end verification of monitoring and control paths.
+                                I conduct research under Prof. Anastassia Fedyk relating to cleaning and classiyfing big data for machine learning models. More on the way!
                             </p>
-                        </div>
-                        
-                        <div class = "slideshow feb-slideshow">
-                            <div class = "img-info">
-                                <button class = "nav-button left">
-                                    &#10094;
-                                </button>
-                                <img class = "img-slideshow">
-                                <button class = "nav-button right">
-                                    &#10095;
-                                </button>
-                            </div>
-                            <div class = "description-slideshow" style = "margin-top: -15px;"></div>
-                            <!-- <button class = "expand-button">
-                                Expand
-                            </button> -->
-                        </div>
-
-                        <div id = "feb-full-screen" class = "full-screen hidden">
-                            <div class = "full-screen-content">
-                                <img id = "full-screen-img" src = "">
-                                <div class = "full-screen description" id = "full-screen-description"></div>
-                                <button class = "close-full-screen">&times;</button>
-                            </div>
+                            <img src = "images/haas-logo.png">
                         </div>
                     </div>
                 </div>
-                <div class = "ESB">
-                    <h2 style = "margin-left: 50px;" id = "esb-section">
-                        Engineering Solutions at Berkeley <span>(ESB)</span>:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Senior Engineering Consultant (January 2026 - Present): TBD</u></p>
-                    <div class = "experience-individual-subcontent">
-                        <div>
+                <div class = "professional-experience">
+                    <h1 style = "scroll-margin-top: 100px;" id = "professional-section">Professional Experiences</h1>
+                    <div class = "FEB">
+                        <h2 style = "margin-left: 50px;" id = "feb-section">
+                            Formula Electric at Berkeley <span>(FEB)</span>:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Accumulator Electrical Engineer (October 2025-present)</u></p>
+                        <div class = "experience-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px; margin-bottom: 10px;">
+                                    I am currently designing and validating a 4-layer segment-level battery management system (BMS) PCB for a custom 140s3p accumulator, where each segment board monitors fourteen cells.
+                                    The segment board serves as the primary control and monitoring unit at the module leve, integrating ADBMS ICs for cell voltage measurements via board-to-board connections and multiplexed temperature sensing through ribbon cables.
+                                    The system communicates with adjacent boards using isoSPI and CAN, providing robust data transfer and isolation in a high-voltage environment.
+                                </p>
+                                <p style = "margin-left: 50px;">
+                                    To validate the design, I simulate fourteen-cell battery segment using a resistor-divider network stepping down from 52V and verify voltage measurement accuracy and fault behavior. 
+                                    Cell balacning functionality is tested by deploying STM32 firmware on a companion controller board, which transmits balancing commnads over isoSPI to the ADBMS IC, enabling end-to-end verification of monitoring and control paths.
+                                </p>
+                            </div>
+                            
+                            <div class = "slideshow feb-slideshow">
+                                <div class = "img-info">
+                                    <button class = "nav-button left">
+                                        &#10094;
+                                    </button>
+                                    <img class = "img-slideshow">
+                                    <button class = "nav-button right">
+                                        &#10095;
+                                    </button>
+                                </div>
+                                <div class = "description-slideshow" style = "margin-top: -15px;"></div>
+                                <!-- <button class = "expand-button">
+                                    Expand
+                                </button> -->
+                            </div>
+
+                            <div id = "feb-full-screen" class = "full-screen hidden">
+                                <div class = "full-screen-content">
+                                    <img id = "full-screen-img" src = "">
+                                    <div class = "full-screen description" id = "full-screen-description"></div>
+                                    <button class = "close-full-screen">&times;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "ESB">
+                        <h2 style = "margin-left: 50px;" id = "esb-section">
+                            Engineering Solutions at Berkeley <span>(ESB)</span>:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Senior Engineering Consultant (January 2026 - Present): TBD</u></p>
+                        <div class = "experience-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px;">
+                                    More to Come!
+                                </p>
+                            </div>
+                            <!-- <div class = "slideshow esb-slideshow"> -->
+                                <!-- <div class = "img-info">
+                                    <button class = "nav-button left">
+                                        &#10094;
+                                    </button>
+                                    <img class = "img-slideshow">
+                                    <button class = "nav-button right">
+                                        &#10095;
+                                    </button>
+                                </div>
+                                <div class = "description-slideshow"></div>
+                                <!-- <button class = "expand-button">
+                                    Expand
+                                </button> -->
+                            <!-- </div> -->
+                        </div>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant (September - December 2025): Magnitude.io</u></p>
+                        <div class = "experience-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px; margin-bottom:10px">
+                                    I worked with a multidisciplinary team to develop a random positionig machine designed to simulate microgravity conditions for fungal growth experiments on Earth.
+                                    I designed a two-layer control PCB and mechanical housing integrating an ESP32, terminal blocks for power and signal interfaces (including an optical encoder and motor driver), and a USB-C interface.
+                                    The board accepts a 12V input and generates regulated 5V and 3.3V rails for system operation.
+                                </p>
+                                <p style = "margin-left: 50px;">
+                                    The controller communicates with a Raspberry PI over I2C and interfaces with an Adafruit capacitive touch display using SPI and GPIO. 
+                                    In addition, I contributed to the development of randomized motion trajectories using Fourier-series-based methods and pseudo-random binary sequences, leveraging encoder feedback to generate continuously varying orientation paths.
+                                </p>
+                            </div>
+                            <div class = "slideshow esb-slideshow">
+                                <div class = "img-info">
+                                    <button class = "nav-button left">
+                                        &#10094;
+                                    </button>
+                                    <img class = "img-slideshow">
+                                    <button class = "nav-button right">
+                                        &#10095;
+                                    </button>
+                                </div>
+                                <div class = "description-slideshow" style = "margin-top: -15px;"></div>
+                                <!-- <button class = "expand-button">
+                                    Expand
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "independent-contractor">
+                        <h2 style = "margin-left: 50px;" id = "independent-contractor-section">
+                            Innovative Building Energy Control:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Test and Validation Engineer (December 2025 - January 2026): </u></p>
+                        <div class = "experience-individual-subcontent">
                             <p style = "margin-left: 50px;">
-                                More to Come!
+                                As an independent contractor, I executed hardware bring-up and debugged over fifty 2-layer PCBs built around ATmega328p microcontrollers.
+                                These boards integrated isolated AC-DC conversion, onboard rectification, and regualted 5V and 3.3V power rails.
+                                Using oscilloscopes and multimeters, I verified power integrity, regulation stability, and MCU operation.
+                                In parallel, I implemented a solar panel telemetry system that collected current data, displayed it onto LCD interfaces, and transmitted over Wi-Fi for remote monitoring.
                             </p>
-                        </div>
-                        <!-- <div class = "slideshow esb-slideshow"> -->
-                            <!-- <div class = "img-info">
-                                <button class = "nav-button left">
-                                    &#10094;
-                                </button>
-                                <img class = "img-slideshow">
-                                <button class = "nav-button right">
-                                    &#10095;
-                                </button>
+                            <div class = "image-description" style = "margin-right: 30px;">
+                                <img src = "images/independent-contractor-boards.jpg" style = "max-width: 300px;">
+                                <p style = "margin-top: -15px; font-size: 18px; text-align: center;">Some of the boards that I brought up and validated</p>
                             </div>
-                            <div class = "description-slideshow"></div>
-                            <!-- <button class = "expand-button">
-                                Expand
-                            </button> -->
-                        <!-- </div> -->
-                    </div>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Engineering Consultant (September - December 2025): Magnitude.io</u></p>
-                    <div class = "experience-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px; margin-bottom:10px">
-                                I worked with a multidisciplinary team to develop a random positionig machine designed to simulate microgravity conditions for fungal growth experiments on Earth.
-                                I designed a two-layer control PCB and mechanical housing integrating an ESP32, terminal blocks for power and signal interfaces (including an optical encoder and motor driver), and a USB-C interface.
-                                The board accepts a 12V input and generates regulated 5V and 3.3V rails for system operation.
-                            </p>
-                            <p style = "margin-left: 50px;">
-                                The controller communicates with a Raspberry PI over I2C and interfaces with an Adafruit capacitive touch display using SPI and GPIO. 
-                                In addition, I contributed to the development of randomized motion trajectories using Fourier-series-based methods and pseudo-random binary sequences, leveraging encoder feedback to generate continuously varying orientation paths.
-                            </p>
-                        </div>
-                        <div class = "slideshow esb-slideshow">
-                            <div class = "img-info">
-                                <button class = "nav-button left">
-                                    &#10094;
-                                </button>
-                                <img class = "img-slideshow">
-                                <button class = "nav-button right">
-                                    &#10095;
-                                </button>
-                            </div>
-                            <div class = "description-slideshow" style = "margin-top: -15px;"></div>
-                            <!-- <button class = "expand-button">
-                                Expand
-                            </button> -->
                         </div>
                     </div>
                 </div>
+                <div class = "other-experience">
+                    <h1 style = "scroll-margin-top: 100px;" id = "other-section">Other</h1>
+                    <div class = "high-school">
+                        <h2 id = "hs-section" style = "margin-left: 50px;">
+                            High School Quests:
+                        </h2>
 
-                <div class = "independent-contractor">
-                    <h2 style = "margin-left: 50px;" id = "independent-contractor-section">
-                        Innovative Building Energy Control:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Test and Validation Engineer (December 2025 - January 2026): </u></p>
-                    <div class = "experience-individual-subcontent">
-                        <p style = "margin-left: 50px;">
-                            As an independent contractor, I executed hardware bring-up and debugged over fifty 2-layer PCBs built around ATmega328p microcontrollers.
-                            These boards integrated isolated AC-DC conversion, onboard rectification, and regualted 5V and 3.3V power rails.
-                            Using oscilloscopes and multimeters, I verified power integrity, regulation stability, and MCU operation.
-                            In parallel, I implemented a solar panel telemetry system that collected current data, displayed it onto LCD interfaces, and transmitted over Wi-Fi for remote monitoring.
-                        </p>
-                        <div class = "image-description" style = "margin-right: 30px;">
-                            <img src = "images/independent-contractor-boards.jpg" style = "max-width: 300px;">
-                            <p style = "margin-top: -15px; font-size: 18px; text-align: center;">Some of the boards that I brought up and validated</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class = "other-experience">
-                <h1 style = "scroll-margin-top: 100px;" id = "other-section">Other</h1>
-                <div class = "high-school">
-                    <h2 id = "hs-section" style = "margin-left: 50px;">
-                        High School Quests:
-                    </h2>
-
-                    <div class = "experience-individual-subcontent">
-                        <div style = "margin-left: 50px; font-size: 1.2rem;">
-                            During my junior and senior years of high school, I was the lead programmer and <span style = "white-space: nowrap;">co-president</span> of our robotics team, team 5805.
-                            I led the development of our team's first swerve drive, implemented vision-based target tracking using PhotonVision, and developed autonomous routines with PathPlanner.
-                            Additionally, I helped wire the robot and machine parts for our telescopic elevator and chassis subsystems. 
-                            This eventually led to our program's first win in seven years. 
-                            <br><br>
-                            I also competed in academic competitions: 
-                            <ul style = "margin-left: 20px;">
-                                <li>USA Computing Olympiad Gold Qualifer</li>
-                                <li>American Invitational Mathematics Exam Qualifier</li>
-                                <li>American Computer Science League Bronze Medalist</li>
-                            </ul><br>                            
-                        </div>
-                        <div class = "slideshow hs-slideshow">
-                            <div class = "img-info">
-                                <button class = "nav-button left">
-                                    &#10094;
-                                </button>
-                                <img class = "img-slideshow">
-                                <button class = "nav-button right">
-                                    &#10095;
-                                </button>
+                        <div class = "experience-individual-subcontent">
+                            <div style = "margin-left: 50px; font-size: 1.2rem;">
+                                During my junior and senior years of high school, I was the lead programmer and <span style = "white-space: nowrap;">co-president</span> of our robotics team, team 5805.
+                                I led the development of our team's first swerve drive, implemented vision-based target tracking using PhotonVision, and developed autonomous routines with PathPlanner.
+                                Additionally, I helped wire the robot and machine parts for our telescopic elevator and chassis subsystems. 
+                                This eventually led to our program's first win in seven years. 
+                                <br><br>
+                                I also competed in academic competitions: 
+                                <ul style = "margin-left: 20px;">
+                                    <li>USA Computing Olympiad Gold Qualifer</li>
+                                    <li>American Invitational Mathematics Exam Qualifier</li>
+                                    <li>American Computer Science League Bronze Medalist</li>
+                                </ul><br>                            
                             </div>
-                            <div class = "description-slideshow"></div>
-                            <!-- <button class = "expand-button">
-                                Expand
-                            </button> -->
+                            <div class = "slideshow hs-slideshow">
+                                <div class = "img-info">
+                                    <button class = "nav-button left">
+                                        &#10094;
+                                    </button>
+                                    <img class = "img-slideshow">
+                                    <button class = "nav-button right">
+                                        &#10095;
+                                    </button>
+                                </div>
+                                <div class = "description-slideshow"></div>
+                                <!-- <button class = "expand-button">
+                                    Expand
+                                </button> -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
         
         <div class = "footer-container">
             <div class = "cow" id = "cow"></div>

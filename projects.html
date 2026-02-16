@@ -31,198 +31,202 @@
                 <a href="assets/jerryzhou-resume.pdf">Resume</a>
             </nav>
         </header>
-
-        <nav class = "projects-menu">
-            <h3><a href = "#hardware-projects-section">  Hardware Projects</a></h3>
-                <a href = "#voice-transceiver-section"> Voice Transceiver </a>
-                <a href = "#wdm-section"> Wavelength Division Multiplexer <span>(WDM)</span></a>
-            <h3><a href = "#software-projects-section">  Software Projects</a></h3>
-                <a href = "#f1-model-section"> Formula One Prediction Model </a>
-                <a href = "#scheme-interpreter-section"> Scheme Interpreter </a>
-                <a href = "#website-section"> Personal Website </a>
-            <h3><a href = "#other-projects-section"> Other: </a></h3>
-                <a href = "#ib-section"> International Baccalaureate Papers</a>
-        </nav>
-        </nav>
-        <main class = "projects-content" id = "main-projects">
-            <div class = "hardware-projects">
-                <h1 style = "scroll-margin-top: 100px;" id = "hardware-projects-section">
-                    Hardware Projects
-                </h1>
-                <div class = "voice-transceiver">
-                    <h2 style = "margin-left: 50px;" id = "voice-transceiver-section">
-                        Voice Transciever:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Spring 2026</u></p>
-                    <div class = "projects-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px; margin-bottom: 5px;">
-                                Coming Soon!
-                            </p>
-                        </div>
-                        <!-- <div class = "description-slideshow">
-                            <img src = "images/polarized-double-slit-real.jpg" style = "width: 300px; margin-bottom: 0px;">
-                            <p>Physical setup of the Polarized Double Slit</p>
-                        </div> -->
-                    </div>
-                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
-                        <!-- Paper: <a href="assets/Physics-IA.pdf" target = "_blank">Link</a> <br> -->
-                    </p>
-                </div>
-                <div class = "WDM">
-                    <h2 style = "margin-left: 50px;" id = "wdm-section">
-                        Wavelength Division Multiplexer (WDM):
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Summer 2024</u></p>
-                    <div class = "projects-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px; margin-bottom: 5px;">
-                                <a href = "https://en.wikipedia.org/wiki/Wavelength-division_multiplexing">Wavelength division multiplexing (WDM)</a> is a foundational technique in fiber-optic communication that enables multiple data streams to be transmitted simultaneously over a single optical channel by assigning each stream a distinct wavelength.
-                                Each wavelength id independently modulated, optically combined using wavelength-selective elements, transmitted through a shared medium, and then seperated and detected at the reciever
-                            </p>
-                            <p style = "margin-left: 50px;">
-                                Inspired by this principle, I built a three-port optical WDM system using laser points, trichroic crystals, photodetectors, and Arudino-based control.
-                                The trichroic crystals were used to multiplex and demultiplex three laser wavelengths, with each channel implementing independent data transmission.
-                                I developed a custom communication protocl for the green laser and using Arduino Serial communication for the remaining channels, achieving a 92% end-to-end transmission accuracy.
-                                Mechanical alignment was done through custom-desigend mounts modeled in Fusino 360 and 3D printed.
-                                We also evaluated system robustness by introducing optical disturbances and implementing basica data recovery logic. 
-                            </p>
-                        </div>
-                        <div class = "image-description">
-                            <img src = "images/WDM-real.jpg" style = "width: 300px; margin-bottom: 0px;">
-                            <p style = "text-align: center;">Physical setup of the WDM</p>
-                        </div>
-                    </div>
-                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
-                        Presentation: <a href="assets/WDM-Presentation.pdf" target = "_blank">Link</a> <br>
-                        Source Code: <a href = "https://github.com/jerry-zh0u/COSMOSCommProject" target = "_blank">Link</a>
-                    </p>
-                </div>
+        
+        <div class = "page-layout">
+            <div class = "menu-column">
+                <nav class = "projects-menu">
+                    <h3><a href = "#hardware-projects-section">  Hardware Projects</a></h3>
+                        <a href = "#voice-transceiver-section"> Voice Transceiver </a>
+                        <a href = "#wdm-section"> Wavelength Division Multiplexer (WDM)</a>
+                    <h3><a href = "#software-projects-section">  Software Projects</a></h3>
+                        <a href = "#f1-model-section"> Formula One Prediction Model </a>
+                        <a href = "#scheme-interpreter-section"> Scheme Interpreter </a>
+                        <a href = "#website-section"> Personal Website </a>
+                    <h3><a href = "#other-projects-section"> Other: </a></h3>
+                        <a href = "#ib-section"> International Baccalaureate Papers</a>
+                </nav>
             </div>
 
-            <div class = "software-projects">
-                <h1 style = "scroll-margin-top: 100px;" id = "software-projects-section">
-                    Software Projects
-                </h1>
-
-                <div class = "f1-model">
-                    <h2 style = "margin-left: 50px;" id = "f1-model-section">
-                        Formula One Prediction Model:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025/2026</u></p>
-                    <div class = "projects-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px; margin-bottom: 5px;">
-                                This project started from my interest of F1 (Essere Ferrari) as well as wanting to learn more about ML.
-                                The goal of this model is to predict the finishing order of drivers using historical race data. 
-                                <br>
-
-                                I trained a gradient-boosted decision tree model (LightGBM), selected for tis strong performance on tabular data, ability to model nonlinear feature interactoins, and built-in regularization.
-                                Input features inclued lap times, grid position, track conditions, and environmental variables.
-                                Because race outcome prediction is a ranking problem, the NDCG@1/3/10 metric was chosen as it emphasized correctness within meaninful outcome groups (winner, podium, points), rather than individual classification accuracy
-
-                                <br>
-                                Furthermore, the features were engineered with shifted windows in pandas to prevent data leakage, so that only information avilable prior to each race was used for prediction.
-                                The final model utilized 16 temporal features and achieved NDCG@1/3/10 scores of 0.98, 0.97, and 0.94 respectively.
-                                <br>
-                                Currently, I am trying to predict average race times using a seperate LSTM model architecture, that could also serve as another temporal feature to model my results. 
-                                Additionally, I am performing robustness checks and validation experiments to investigate potential sources of my overly optimistic performance to ensure that the model generalizes beyond the training data.
-                            </p>
+            <main class = "projects-content" id = "main-projects">
+                <div class = "hardware-projects">
+                    <h1 style = "scroll-margin-top: 100px;" id = "hardware-projects-section">
+                        Hardware Projects
+                    </h1>
+                    <div class = "voice-transceiver">
+                        <h2 style = "margin-left: 50px;" id = "voice-transceiver-section">
+                            Voice Transciever:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Spring 2026</u></p>
+                        <div class = "projects-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px; margin-bottom: 5px;">
+                                    Coming Soon!
+                                </p>
+                            </div>
+                            <!-- <div class = "description-slideshow">
+                                <img src = "images/polarized-double-slit-real.jpg" style = "width: 300px; margin-bottom: 0px;">
+                                <p>Physical setup of the Polarized Double Slit</p>
+                            </div> -->
                         </div>
-                        <div class = "image-description">
-                            <img src = "images/f1-picture.jpg" style = "width: 300px; margin-bottom: 0px;">
-                            <p style = "text-align: center;">Vroom Vroom</p>
-                        </div>
-                    </div>
-                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
-                        Source Code: <a href = "https://github.com/jerry-zh0u/Formula-One-Model" target = "_blank">Link</a> <br>
-                        Dataset: <a href = "https://www.kaggle.com/datasets/jtrotman/formula-1-race-data">Link</a>
-                    </p>
-                </div>
-
-                <div class = "scheme-interpreter">
-                    <h2 style = "margin-left: 50px;" id = "scheme-interpreter-section">
-                        Scheme Interpreter:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Fall 2025</u></p>
-                    <div class = "projects-individual-subcontent">
-                        <div>
-                            <p style = "margin-left: 50px;">
-                                I developed a fully functional interpreter for the <a href = "https://www.scheme.org/">Scheme programming language</a> in Python, implementing core language features including expression parsing, evaluation, and environment management.
-                                The interpreter supports both lexical and dynamic scoping through chained environments, enabling correct handling of closures and variable resolution.
-                                Additionally functionality includes user-defined procedures, arithmetic and logical primitives, and higher-order functions, adhering closely to Scheme's evaluation semantics.
-                            </p>
-                            <p style = "margin-left: 50px;;">
-                                Enjoy a piece of art I made with the interpreter via an external Turtle graphics interface, earning fifth in a class-wide programming competition.
-                            </p>
-                        </div>
-                        <div class = "image-description">
-                            <video width = "300px" controls>
-                                <source src = "images/scheme-contest.mp4" type = "video/mp4">
-                            </video>
-                            <p style = "text-align: center;">Video of Scheme Art</p>
-                        </div>
-                    </div>
-                    <p style = "margin-left: 50px;margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
-                        Art Source Code: <a href = "assets/contest.scm" target = "_blank">Link</a>
-                    </p>
-                </div>
-
-                <div class = "website">
-                    <h2 style = "margin-left: 50px;" id = "website-section">
-                        Personal Website:
-                    </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025/2026</u></p>
-                    <div class = "projects-individual-subcontent">
-                        <p style = "margin-left: 50px">
-                            This website! It Utilizes HTML, CSS, and Javascript as the tech stack to create a responsive UI/UX that showcases my portfolio through links, images, and descriptions.
-                            I am currently in the process of transfering this into a more modern framework with React and Typscript.
+                        <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                            <!-- Paper: <a href="assets/Physics-IA.pdf" target = "_blank">Link</a> <br> -->
                         </p>
                     </div>
-                    <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
-                        Source Code: <a href = "https://github.com/jerry-zh0u/Personal-Website" target = "_blank">Link</a>
-                    </p>
-                </div>
-            </div>
-            <div class = "other-section">
-                <h1 style = "scroll-margin-top: 100px;" id = "other-projects-section">
-                    Other
-                </h1>
-                <div class = "ib">
-                    <h2 style = "margin-left: 50px;" id = "ib-section">
-                        International Baccalaureate Papers:
-                    </h2>
-                    <div class = "projects-individual-subcontent">
-                        <p style = "margin-left: 50px;"> I was a International Baccalaureate Diploma Recipient in high school, and below are some of my papers I have written for the certificate:</p>
-                    </div>
-                    <div class = "projects-individual-subcontent">
-                        <div class = "project-button-grid">
-                            <button class = "custom-grid-btn" data-message = "cs_msg">CS: N-dimensional Data Structures</button>
-                            <button class = "custom-grid-btn" data-message = "physics_msg">Physics: Polarized Double Slit Experiment</button>
-                            <button class = "custom-grid-btn" data-message = "math_msg">Math: Fourier Series Analysis</button>
-                            <button class = "custom-grid-btn" data-message = "chem_msg">Chemistry: Belousov-Zhabotinsky Reaction</button>
+                    <div class = "WDM">
+                        <h2 style = "margin-left: 50px;" id = "wdm-section">
+                            Wavelength Division Multiplexer (WDM):
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Summer 2024</u></p>
+                        <div class = "projects-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px; margin-bottom: 5px;">
+                                    <a href = "https://en.wikipedia.org/wiki/Wavelength-division_multiplexing">Wavelength division multiplexing (WDM)</a> is a foundational technique in fiber-optic communication that enables multiple data streams to be transmitted simultaneously over a single optical channel by assigning each stream a distinct wavelength.
+                                    Each wavelength id independently modulated, optically combined using wavelength-selective elements, transmitted through a shared medium, and then seperated and detected at the reciever
+                                </p>
+                                <p style = "margin-left: 50px;">
+                                    Inspired by this principle, I built a three-port optical WDM system using laser points, trichroic crystals, photodetectors, and Arudino-based control.
+                                    The trichroic crystals were used to multiplex and demultiplex three laser wavelengths, with each channel implementing independent data transmission.
+                                    I developed a custom communication protocl for the green laser and using Arduino Serial communication for the remaining channels, achieving a 92% end-to-end transmission accuracy.
+                                    Mechanical alignment was done through custom-desigend mounts modeled in Fusino 360 and 3D printed.
+                                    We also evaluated system robustness by introducing optical disturbances and implementing basica data recovery logic. 
+                                </p>
+                            </div>
+                            <div class = "image-description">
+                                <img src = "images/WDM-real.jpg" style = "width: 300px; margin-bottom: 0px;">
+                                <p style = "text-align: center;">Physical setup of the WDM</p>
+                            </div>
                         </div>
-                        <div>
-                            <h2 style = "margin-left: 50px;" id = "ib-message-title"></h2>
-                            <p id = "ib-message-display"></p>
-                            <p style = "margin-left: 50px; margin-right: 20px; margin-top: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;" id = "ib-message-links">
-                                Source Code: <a href = "https://github.com/jerry-zh0u/Personal-Website" target = "_blank">Link</a>
+                        <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                            Presentation: <a href="assets/WDM-Presentation.pdf" target = "_blank">Link</a> <br>
+                            Source Code: <a href = "https://github.com/jerry-zh0u/COSMOSCommProject" target = "_blank">Link</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class = "software-projects">
+                    <h1 style = "scroll-margin-top: 100px;" id = "software-projects-section">
+                        Software Projects
+                    </h1>
+
+                    <div class = "f1-model">
+                        <h2 style = "margin-left: 50px;" id = "f1-model-section">
+                            Formula One Prediction Model:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025/2026</u></p>
+                        <div class = "projects-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px; margin-bottom: 5px;">
+                                    This project started from my interest of F1 (Essere Ferrari) as well as wanting to learn more about ML.
+                                    The goal of this model is to predict the finishing order of drivers using historical race data. 
+                                    <br>
+
+                                    I trained a gradient-boosted decision tree model (LightGBM), selected for tis strong performance on tabular data, ability to model nonlinear feature interactoins, and built-in regularization.
+                                    Input features inclued lap times, grid position, track conditions, and environmental variables.
+                                    Because race outcome prediction is a ranking problem, the NDCG@1/3/10 metric was chosen as it emphasized correctness within meaninful outcome groups (winner, podium, points), rather than individual classification accuracy
+
+                                    <br>
+                                    Furthermore, the features were engineered with shifted windows in pandas to prevent data leakage, so that only information avilable prior to each race was used for prediction.
+                                    The final model utilized 16 temporal features and achieved NDCG@1/3/10 scores of 0.98, 0.97, and 0.94 respectively.
+                                    <br>
+                                    Currently, I am trying to predict average race times using a seperate LSTM model architecture, that could also serve as another temporal feature to model my results. 
+                                    Additionally, I am performing robustness checks and validation experiments to investigate potential sources of my overly optimistic performance to ensure that the model generalizes beyond the training data.
+                                </p>
+                            </div>
+                            <div class = "image-description">
+                                <img src = "images/f1-picture.jpg" style = "width: 300px; margin-bottom: 0px;">
+                                <p style = "text-align: center;">Vroom Vroom</p>
+                            </div>
+                        </div>
+                        <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                            Source Code: <a href = "https://github.com/jerry-zh0u/Formula-One-Model" target = "_blank">Link</a> <br>
+                            Dataset: <a href = "https://www.kaggle.com/datasets/jtrotman/formula-1-race-data">Link</a>
+                        </p>
+                    </div>
+
+                    <div class = "scheme-interpreter">
+                        <h2 style = "margin-left: 50px;" id = "scheme-interpreter-section">
+                            Scheme Interpreter:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Fall 2025</u></p>
+                        <div class = "projects-individual-subcontent">
+                            <div>
+                                <p style = "margin-left: 50px;">
+                                    I developed a fully functional interpreter for the <a href = "https://www.scheme.org/">Scheme programming language</a> in Python, implementing core language features including expression parsing, evaluation, and environment management.
+                                    The interpreter supports both lexical and dynamic scoping through chained environments, enabling correct handling of closures and variable resolution.
+                                    Additionally functionality includes user-defined procedures, arithmetic and logical primitives, and higher-order functions, adhering closely to Scheme's evaluation semantics.
+                                </p>
+                                <p style = "margin-left: 50px;;">
+                                    Enjoy a piece of art I made with the interpreter via an external Turtle graphics interface, earning fifth in a class-wide programming competition.
+                                </p>
+                            </div>
+                            <div class = "image-description">
+                                <video width = "300px" controls>
+                                    <source src = "images/scheme-contest.mp4" type = "video/mp4">
+                                </video>
+                                <p style = "text-align: center;">Video of Scheme Art</p>
+                            </div>
+                        </div>
+                        <p style = "margin-left: 50px;margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                            Art Source Code: <a href = "assets/contest.scm" target = "_blank">Link</a>
+                        </p>
+                    </div>
+
+                    <div class = "website">
+                        <h2 style = "margin-left: 50px;" id = "website-section">
+                            Personal Website:
+                        </h2>
+                        <p style = "margin-left: 50px; font-size: 1.2rem;"><u>Winter 2025/2026</u></p>
+                        <div class = "projects-individual-subcontent">
+                            <p style = "margin-left: 50px">
+                                This website! It Utilizes HTML, CSS, and Javascript as the tech stack to create a responsive UI/UX that showcases my portfolio through links, images, and descriptions.
+                                I am currently in the process of transfering this into a more modern framework with React and Typscript.
                             </p>
                         </div>
+                        <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
+                            Source Code: <a href = "https://github.com/jerry-zh0u/Personal-Website" target = "_blank">Link</a>
+                        </p>
                     </div>
                 </div>
-                
-            </div>
-        </main>
-        
+                <div class = "other-section">
+                    <h1 style = "scroll-margin-top: 100px;" id = "other-projects-section">
+                        Other
+                    </h1>
+                    <div class = "ib">
+                        <h2 style = "margin-left: 50px;" id = "ib-section">
+                            International Baccalaureate Papers:
+                        </h2>
+                        <div class = "projects-individual-subcontent">
+                            <p style = "margin-left: 50px;"> I was a International Baccalaureate Diploma Recipient in high school, and below are some of my papers I have written for the certificate:</p>
+                        </div>
+                        <div class = "projects-individual-subcontent">
+                            <div class = "project-button-grid">
+                                <button class = "custom-grid-btn" data-message = "cs_msg">CS: N-dimensional Data Structures</button>
+                                <button class = "custom-grid-btn" data-message = "physics_msg">Physics: Polarized Double Slit Experiment</button>
+                                <button class = "custom-grid-btn" data-message = "math_msg">Math: Fourier Series Analysis</button>
+                                <button class = "custom-grid-btn" data-message = "chem_msg">Chemistry: Belousov-Zhabotinsky Reaction</button>
+                            </div>
+                            <div>
+                                <h2 style = "margin-left: 50px;" id = "ib-message-title"></h2>
+                                <p id = "ib-message-display"></p>
+                                <p style = "margin-left: 50px; margin-right: 20px; margin-top: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;" id = "ib-message-links">
+                                    Source Code: <a href = "https://github.com/jerry-zh0u/Personal-Website" target = "_blank">Link</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </main>
+        </div>
+ 
         <div class = "footer-container">
             <div class = "cow" id = "cow"></div>
+                <footer class = "site-footer">
+                    <p>&copy; <span id = "year"></span> Jerry Zhou. All rights reserved.</p>
+                </footer>
+            </div>
 
-            <footer class = "site-footer">
-                <p>&copy; <span id = "year"></span> Jerry Zhou. All rights reserved.</p>
-            </footer>
+            <script src = "home.js"></script>
         </div>
-
-        <script src = "home.js"></script>
     </body>
 </html>

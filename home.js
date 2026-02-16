@@ -262,19 +262,20 @@ function fetchLastUpdated() {
         .catch(err => console.error("Error fetching GitHub commits:", err));
 }
 
-// display.textContent = ib_messages_content["cs_msg"];
+function toggleMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.toggle('active');
+}
 
-// buttons.forEach(button => {
-//     button.addEventListener("click", () => {
-//         buttons.forEach(btn => btn.classList.remove("active"));
-
-//         button.classList.add("active");
-
-//         const key = button.dataset.message;
-//         display.textContent = ib_messages_content[key];
-//     });
-// });
-
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    if (!hamburger.contains(event.target) && !mobileNav.contains(event.target)) {
+        mobileNav.classList.remove('active');
+    }
+});
 
 document.addEventListener("DOMContentLoaded", fetchLastUpdated);
 document.addEventListener("DOMContentLoaded", cowAnimate)

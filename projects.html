@@ -17,18 +17,31 @@
                 <a href ="courses.html">Coursework</a>
                 <a href = "assets/jerryzhou-resume.pdf">Resume</a>
             </nav>
+
+            <button class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="index.html">Home</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="courses.html">Coursework</a>
+                <a href="assets/jerryzhou-resume.pdf">Resume</a>
+            </nav>
         </header>
 
         <nav class = "projects-menu">
             <h3><a href = "#hardware-projects-section">  Hardware Projects</a></h3>
-                &emsp; <a href = "#voice-transceiver-section"> Voice Transceiver </a> <br>
-                &emsp; <a href = "#wdm-section"> Wavelength Division Multiplexer <span>(WDM)</span></a>
+                <a href = "#voice-transceiver-section"> Voice Transceiver </a>
+                <a href = "#wdm-section"> Wavelength Division Multiplexer <span>(WDM)</span></a>
             <h3><a href = "#software-projects-section">  Software Projects</a></h3>
-                &emsp; <a href = "#f1-model-section"> Formula One Prediction Model </a><br>
-                &emsp; <a href = "#scheme-interpreter-section"> Scheme Interpreter </a> <br>
-                &emsp; <a href = "#website-section"> Personal Website </a>
+                <a href = "#f1-model-section"> Formula One Prediction Model </a>
+                <a href = "#scheme-interpreter-section"> Scheme Interpreter </a>
+                <a href = "#website-section"> Personal Website </a>
             <h3><a href = "#other-projects-section"> Other: </a></h3>
-                &emsp; <a href = "#ib-section"> International Baccalaureate Papers</a><br>
+                <a href = "#ib-section"> International Baccalaureate Papers</a>
         </nav>
         </nav>
         <main class = "projects-content" id = "main-projects">
@@ -75,9 +88,9 @@
                                 We also evaluated system robustness by introducing optical disturbances and implementing basica data recovery logic. 
                             </p>
                         </div>
-                        <div class = "description-slideshow">
+                        <div class = "image-description">
                             <img src = "images/WDM-real.jpg" style = "width: 300px; margin-bottom: 0px;">
-                            <p>Physical setup of the WDM</p>
+                            <p style = "text-align: center;">Physical setup of the WDM</p>
                         </div>
                     </div>
                     <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
@@ -116,9 +129,9 @@
                                 Additionally, I am performing robustness checks and validation experiments to investigate potential sources of my overly optimistic performance to ensure that the model generalizes beyond the training data.
                             </p>
                         </div>
-                        <div class = "description-slideshow">
+                        <div class = "image-description">
                             <img src = "images/f1-picture.jpg" style = "width: 300px; margin-bottom: 0px;">
-                            <p>Vroom Vroom</p>
+                            <p style = "text-align: center;">Vroom Vroom</p>
                         </div>
                     </div>
                     <p style = "margin-left: 50px; margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
@@ -139,15 +152,15 @@
                                 The interpreter supports both lexical and dynamic scoping through chained environments, enabling correct handling of closures and variable resolution.
                                 Additionally functionality includes user-defined procedures, arithmetic and logical primitives, and higher-order functions, adhering closely to Scheme's evaluation semantics.
                             </p>
-                            <p style = "margin-left: 50px;">
+                            <p style = "margin-left: 50px;;">
                                 Enjoy a piece of art I made with the interpreter via an external Turtle graphics interface, earning fifth in a class-wide programming competition.
                             </p>
                         </div>
-                        <div class = "description-slideshow">
+                        <div class = "image-description">
                             <video width = "300px" controls>
                                 <source src = "images/scheme-contest.mp4" type = "video/mp4">
                             </video>
-                            <p>Video of Scheme Art</p>
+                            <p style = "text-align: center;">Video of Scheme Art</p>
                         </div>
                     </div>
                     <p style = "margin-left: 50px;margin-right: 20px; text-align: center; border: 1px solid #e5e5e5; border-radius: 10px;">
@@ -179,7 +192,9 @@
                     <h2 style = "margin-left: 50px;" id = "ib-section">
                         International Baccalaureate Papers:
                     </h2>
-                    <p style = "margin-left: 50px; font-size: 1.2rem; padding-bottom: 20px;"> I was a International Baccalaureate Diploma Recipient in high school, and below are some of my papers I have written for the certificate:</p>
+                    <div class = "projects-individual-subcontent">
+                        <p style = "margin-left: 50px;"> I was a International Baccalaureate Diploma Recipient in high school, and below are some of my papers I have written for the certificate:</p>
+                    </div>
                     <div class = "projects-individual-subcontent">
                         <div class = "project-button-grid">
                             <button class = "custom-grid-btn" data-message = "cs_msg">CS: N-dimensional Data Structures</button>
